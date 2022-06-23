@@ -1,1 +1,1 @@
-# Проект из HTMLAcademy 
+# Проект из HTML Academy 
