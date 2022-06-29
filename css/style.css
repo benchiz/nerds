@@ -1,0 +1,66 @@
+/* Fonts */
+
+@font-face {
+    font-family: "Roboto";
+    font-weight: 400;
+    font-style: normal;
+    src: local("Roboto"),
+        url(../fonts/roboto.woff2) format("woff2"),
+        url(../fonts/roboto.woff) format("woff");
+}
+
+@font-face {
+    font-family: "Roboto Medium";
+    font-weight: 500;
+    font-style: normal;
+    src: local("Roboto Medium"),
+        url(../fonts/robotomedium.woff2) format("woff2"),
+        url(../fonts/robotomedium.woff) format("woff");
+}
+
+@font-face {
+    font-family: "Roboto Bold";
+    font-weight: 700;
+    font-style: normal;
+    src: local("Roboto Bold"),
+        url(../fonts/robotobold.woff2) format("woff2"),
+        url(../fonts/robotobold.woff) format("woff");
+}
+
+/* Variables */
+
+:root {
+    --basic-black: #000000;
+    --basic-dark-grey: #283136;
+    --basic-medium-grey: #444444;
+    --basic-light-grey: #666666;
+    --basic-slider-pagination-grey: #C1C1C1;
+    --basic-bg-grey: #EEEEEE;
+    --basic-white: #FFFFFF;
+    --basic-light-red: #FB565A;
+    --basic-light-green: #00CA74;
+    --basic-extra-yellow: #EFC849;
+    
+    --basic-range-dot-grey: #ABABAB;
+    --basic-type-input-gray: #4D4D4D;
+    --basic-pagination-border: #DBDBDB;
+
+    --special-hover-red: #E74246;
+    --special-active-red: #D7373B;
+    --special-hover-green: #00BC6C;
+    --special-active-green: #00AA62;
+    --special-hover-yellow: #EAB534;
+    --special-active-yellow: #E5A722;
+    --special-border-light-grey: #D7DCDE;
+    --special-border-hover-grey: #B4B9BB;
+    --special-link-hover-grey: #DFDFDF;
+    --special-link-active-grey: #D5D5D5;
+    --special-filter-grey: #A6A6A6;
+    --special-filter-active: #231F20;
+}
+
+/* Global */
+
+.page-body {
+    font-family: "Roboto", "Arial", sans-serif;
+}
