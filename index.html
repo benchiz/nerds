@@ -59,9 +59,19 @@
         <section class="features">
             <h2 class="visually-hidden">Преимущества</h2>
             <div class="features-slider-wrapper">
-                <input class="custom-radio" type="radio" name="point" id="features-slider-item1">
-                <input class="custom-radio" type="radio" name="point" id="features-slider-item2">
-                <input class="custom-radio" type="radio" name="point" id="features-slider-item3">
+                <form action="">
+                    <fieldset>
+                        <label class="name"><input type="text" placeholder="vashe imya"></label>
+                        <p class="radio">
+                            <input class="visually-hidden" type="radio" id="radio-btn">
+                            <label for="radio-btn">eto label</label>
+                        </p>
+                        <p class="checkbox">
+                            <input class="visually-hidden" type="checkbox" id="check-btn">
+                            <label for="check-btn">eto checkbox</label>
+                        </p>
+                    </fieldset>
+                </form>
                 <div class="features-slider">
                     <div class="features-slides features-slider-item1">
                         <p class="features-slides-desc">Долго, дорого,<br> скрупулезно.</p>

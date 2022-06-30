@@ -128,7 +128,7 @@ img {
 
 /* Visually hidden */
 
-.visually-hidden {
+/* .visually-hidden {
     position: absolute;
     width: 1px;
     height: 1px;
@@ -139,7 +139,7 @@ img {
     clip-path: inset(100%);
     clip: rect(0 0 0 0);
     overflow: hidden;
-}
+} */
 
 /* Slider section */
 
@@ -214,4 +214,52 @@ img {
     background-color: var(--basic-light-red);
     text-align: center;
     border: none;
+}
+
+
+
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    padding: 0;
+    overflow: hidden;
+    white-space: nowrap;
+    border: 0;
+    clip: rect(0 0 0 0);
+    clip-path: inset(100%);
+  }
+
+
+.form{
+    margin: 400px 0;
+}
+.form p {
+    margin-top: 50px;
+}
+
+.checkbox{
+
+}
+.checkbox label{
+    position: relative;
+    padding-left: 50px;
+}
+.checkbox label::after{
+    position: absolute;
+    content: '';
+    width: 23px;
+    height: 23px;
+    border: 1px solid fuchsia;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.checkbox input:checked + label::after {
+ background: url('../img/check.svg'), transparent;
+ background-position: center;
+ background-repeat: no-repeat;
+ background-size: contain;
 }
