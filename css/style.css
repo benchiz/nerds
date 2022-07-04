@@ -97,6 +97,14 @@ img {
     list-style: none;
 }
 
+.site-navigation a {
+    font: inherit;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 30px;
+    text-transform: uppercase;
+}
+
 .site-navigation a:not([href]) {
     cursor: default;
 }
@@ -105,22 +113,29 @@ img {
     border-bottom: 2px solid var(--basic-light-red);
 }
 
+.main-header-logo:hover {
+    opacity: 0.7;
+}
+
+.main-header-logo:active {
+    opacity: 0.3;
+}
+
 /* User cart */
 
 .site-navigation a,
 .user-cart a {
     color: var(--basic-black);
-
 }
 
 .site-navigation a:hover,
-.user-cart a:hover {
+.user-cart-icon:hover {
     color: var(--basic-light-red);
     border: none;
 }
 
 .site-navigation a:active,
-.user-cart a:active {
+.user-cart-icon:active {
     color: var(--basic-black);
     opacity: 0.3;
     border: none;
@@ -153,18 +168,15 @@ img {
 }
 
 .features-slides-desc {
-    font-family: inherit;
-    font-weight: 700;
+    font: inherit;
+    font-weight: 500;
     font-size: 55px;
     line-height: 57px;
     color: var(--basic-black);
 }
 
 .features-slides-text {
-    font-family: inherit;
-    font-size: 16px;
-    line-height: 24px;
-    font-weight: 400;
+    font: inherit;
 }
 
 .features-slider-wrapper .features-slider-controls {
@@ -199,6 +211,29 @@ img {
     background-size: 50%;
 }
 
+/* Services */
+
+.services {
+    border-bottom: 2px solid var(--basic-bg-grey);
+    padding-bottom: 73px;
+}
+
+.services-list {
+    list-style: none;
+}
+
+.services-list-desc {
+    font: inherit;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 30px;
+    text-transform: uppercase;
+}
+
+.services-list-text {
+    font: inherit;
+}
+
 /* Button */
 
 .button {
@@ -208,38 +243,115 @@ img {
     line-height: 18px;
     color: var(--basic-white);
     background-color: var(--basic-light-red);
+    text-transform: uppercase;
     text-align: center;
     border: none;
 }
 
-/* .form{
-    margin: 400px 0;
-}
-.form p {
-    margin-top: 50px;
-}
-
-.checkbox{
-
-}
-.checkbox label{
-    position: relative;
-    padding-left: 50px;
-}
-.checkbox label::after{
-    position: absolute;
-    content: '';
-    width: 23px;
-    height: 23px;
-    border: 1px solid fuchsia;
-    left: 0;
-    top: 50%;
-    transform: translateY(-50%);
+.button-learn span {
+    font: inherit;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 18px;
+    color: var(--basic-white);
+    text-transform: uppercase;
 }
 
-.checkbox input:checked + label::after {
- background: url('../img/check.svg'), transparent;
- background-position: center;
- background-repeat: no-repeat;
- background-size: contain;
-} */
+.button-learn:active span,
+.button-web:active span,
+.button-app:active span,
+.button-presentation:active span,
+.button-write:active span,
+.button-submit:active span {
+    opacity: 0.3;
+}
+
+.button:hover {
+    background-color: var(--special-hover-red);
+}
+
+.button:active {
+    background-color: var(--special-active-red);
+}
+
+.button-app {
+    background-color: var(--basic-light-green);
+}
+
+.button-app:hover {
+    background-color: var(--special-hover-green);
+}
+
+.button-app:active {
+    background-color: var(--special-active-green);
+}
+
+.button-presentation {
+    background-color: var(--basic-extra-yellow);
+}
+
+.button-presentation:hover {
+    background-color: var(--special-hover-yellow);
+}
+
+.button-presentation:active {
+    background-color: var(--special-active-yellow);
+}
+
+/* Company */
+
+.company-desc {
+    font-family: inherit;
+    font-weight: 500;
+    font-size: 45px;
+    line-height: 47px;
+    color: var(--basic-black)
+}
+
+.company-text {
+    font: inherit;
+}
+
+.company h3 {
+    font: inherit;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.company-orders-list li {
+    font: inherit;
+    list-style-type: none;
+}
+
+.company-orders-list li::before {
+    content: '-';
+    color: var(--basic-light-red);
+}
+
+.company-services-acc {
+    font: inherit;
+    font-size: 16px;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.company-services-list dt {
+    font:inherit;
+    font-size: 45px;
+    line-height: 64px;
+    font-weight: 700;
+}
+
+.company-services-list sup {
+    font: inherit;
+    font-size: 26px;
+    line-height: 40px;
+    font-weight: 700;
+}
+
+.company-services-list dd {
+    font: inherit;
+    font-size: 16px;
+    line-height: 18px;
+    color: var(--basic-dark-grey);
+}

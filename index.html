@@ -36,7 +36,7 @@
                     </ul>
                     <div class="user-cart">
                         <a href="blank.html">
-                            <span>Корзина</span>
+                            <span class="user-cart-icon">Корзина</span>
                             <svg width="15" height="15" viewBox="0 0 15 15" fill="none"
                                 xmlns="http://www.w3.org/2000/svg">
                                 <path
@@ -94,7 +94,7 @@
                     <label for="features-slider-item2"></label>
                     <label for="features-slider-item3"></label>
                 </div>
-                <a class="button" href="blank.html">Узнать больше</a>
+                <a class="button button-learn" href="blank.html"><span>Узнать больше</span></a>
             </div>
 
         </section>
@@ -103,26 +103,29 @@
             <h2 class="visually-hidden">Наши услуги</h2>
             <ul class="services-list">
                 <li>
-                    <h3>Веб-сайты</h3>
-                    <p>Мир никогда не будет прежним после того как увидит ваш сайт!</p>
-                    <a href="blank.html">Заказать</a>
+                    <img src="img/web.png" alt="" width="300" height="146">
+                    <h3 class="services-list-desc">Веб-сайты</h3>
+                    <p class="services-list-text">Мир никогда не будет прежним<br> после того как увидит ваш сайт!</p>
+                    <a class="button button-web" href="blank.html"><span>Заказать</span></a>
                 </li>
                 <li>
-                    <h3>Приложения</h3>
-                    <p>Покорите топ-10 приложений в AppStore и Google Play</p>
-                    <a href="blank.html">Заказать</a>
+                    <img src="img/app.png" alt="" width="300" height="146">
+                    <h3 class="services-list-desc">Приложения</h3>
+                    <p class="services-list-text">Покорите топ-10 приложений<br> в AppStore и Google Play</p>
+                    <a class="button button-app" href="blank.html"><span>Заказать</span></a>
                 </li>
                 <li>
-                    <h3>Презентации</h3>
-                    <p>Вы даже не подозреваете, насколько вы изумительны!</p>
-                    <a href="blank.html">Заказать</a>
+                    <img src="img/presentation.png" alt="" width="300" height="146">
+                    <h3 class="services-list-desc">Презентации</h3>
+                    <p class="services-list-text">Вы даже не подозреваете,<br> насколько вы изумительны!</p>
+                    <a class="button button-presentation" href="blank.html"><span>Заказать</span></a>
                 </li>
             </ul>
         </section>
 
         <section class="company">
             <h2 class="visually-hidden">О компании</h2>
-            <p class="company-desc">Мы — маленькая, но гордая дизайн-студия из Краснодара.</p>
+            <p class="company-desc">Мы — маленькая, но гордая<br> дизайн-студия из Краснодара.</p>
             <p class="company-text">Исповедуем принципы минимализма и чистоты. Ставим математический расчет<br>
                 превыше креатива. Работаем не покладая рук, как роботы.</p>
             <h3>Выполняем заказы на разработку:</h3>
@@ -132,14 +135,14 @@
                 <li>Слайдшоу и видео для корпоративных презентаций</li>
             </ul>
 
-            <p>с 2004 года Любим точность во всем:</p>
-            <dl>
+            <p class="company-services-acc">с 2004 года Любим точность во всем:</p>
+            <dl class="company-services-list">
                 <dt>146<sup>%</sup></dt>
-                <dd>Уровень самоотдачи</dd>
+                <dd>Уровень<br> самоотдачи</dd>
                 <dt>100<sup>%</sup></dt>
-                <dd>Соблюдение сроков</dd>
+                <dd>Соблюдение<br> сроков</dd>
                 <dt>50<sup>%</sup></dt>
-                <dd>Минимальная предоплата</dd>
+                <dd>Минимальная<br> предоплата</dd>
             </dl>
         </section>
 
@@ -186,7 +189,7 @@
                 5 лит П, Санкт-Петербург
             </p>
             <a class="contacts-phone" href="tel:+78005558628">+7 800 555-86-28</a><br>
-            <a href="blank.html">Напишите нам</a>
+            <a class="button button-write" href="blank.html"><span>Напишите нам</span></a>
         </section>
     </main>
 
@@ -240,9 +243,9 @@
                 <label for="user-text">Текст письма:</label><br>
                 <textarea name="text" id="user-text" cols="30" rows="10" placeholder="В свободной форме"></textarea>
             </p>
-            <button class="button" type="submit">Отправить</button>
+            <button class="button button-submit" type="submit"><span>Отправить</span></button>
         </form>
-        <button class="modal-close" type="button">Закрыть</button>
+        <button class="modal-close" type="button"><span>Закрыть</span></button>
     </section>
 </body>
 
