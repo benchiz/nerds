@@ -177,8 +177,7 @@ img {
     overflow: hidden;
 }
 
-.features-slides:nth-child(2),
-.features-slides:nth-child(3) {
+.features-slides.hide {
     display: none;
 }
 
@@ -419,56 +418,56 @@ img {
 
 /* Clients */
 
-.clients {
-    margin-top: 73px;
-    margin-bottom: 80px;
-    border-top: 2px solid var(--basic-bg-grey);
-    border-bottom: 2px solid var(--basic-bg-grey);
+
+.clients {}
+
+.clients ul {
+    border-top: 1px solid #EEEEEE;
+    border-bottom: 1px solid #EEEEEE;
+    /* /* display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr; */
+    /* padding-left: 0; */
 }
 
-.clients-list {
-    /* position: relative; */
-    list-style: none;
-    margin: 0;
+.clients ul li {
     display: flex;
-}
-
-.clients-list li {
-    position: relative;
-    margin-right: 48px;
-    /* top: 50%;
-    left: 50%;
-    transform: translate(50%, 50%); */
-    border-right: 2px solid var(--basic-bg-grey);
-}
-
-.clients-list li::after {
-    position: absolute;
-    margin-right: 48px;
-    /* top: 50%;
-    left: 50%;
-    transform: translate(50%, 50%); */
-    width: 2px;
-    height: 52px;
     align-items: center;
     justify-content: center;
-    border-right: 2px solid var(--basic-bg-grey);
+    position: relative;
 }
 
-.clients-list li:last-child {
-    margin-right: 0;
-}
-
-.clients-list a {
+.clients ul li a {
+    padding: 45px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     opacity: 0.2;
+    transition: 0.3s ease;
 }
 
-.clients-list a:hover {
+.clients ul li a img {
+    width: 100%;
+    object-fit: contain;
+}
+
+
+.clients ul li a:hover {
     opacity: 1;
 }
 
-.clients-list a:active {
-    opacity: 0.1;
+.clients ul li:last-child::after {
+    display: none;
+}
+
+.clients ul li::after {
+    position: absolute;
+    content: '';
+    width: 2px;
+    height: 52px;
+    background: #EEEEEE;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
 }
 
 /* Contacts */
@@ -634,4 +633,13 @@ img {
 .modal.open {
     opacity: 1;
     pointer-events: all;
+}
+
+
+
+.map iframe {
+    width: 100%;
+    height: 416px;
+    border: none;
+    outline: none;
 }
