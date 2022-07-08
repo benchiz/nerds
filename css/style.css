@@ -66,7 +66,7 @@ body {
     font-family: "Roboto", "Arial", sans-serif;
     margin: 0;
     padding: 0;
-    font-size: 14px;
+    font-size: 16px;
     line-height: 24px;
     font-weight: 400;
     background-color: var(--basic-white);
@@ -93,12 +93,12 @@ img {
 
 .main-header {
     background-color: var(--basic-bg-grey);
+    padding-top: 48px;
 }
 
 .main-navigation {
-    font-size: 16px;
-    line-height: 30px;
     font: inherit;
+    line-height: 30px;
     font-weight: 500;
     text-transform: uppercase;
     color: var(--basic-black);
@@ -166,10 +166,17 @@ img {
 .features {
     background-color: var(--basic-bg-grey);
     padding-top: 78px;
+    position: relative;
+}
+
+.features img {
+    background: var(--basic-dark-grey);
+    position: absolute;
+    bottom: 0;
+    right: 10%;
 }
 
 .features-slider {
-    position: relative;
     overflow: hidden;
 }
 
@@ -184,11 +191,13 @@ img {
     line-height: 57px;
     color: var(--basic-black);
     margin: 0;
+    padding-bottom: 25px;
 }
 
 .features-slides-text {
     font: inherit;
     margin: 0;
+    padding-bottom: 38px;
 }
 
 .features-slider-controls {
@@ -197,6 +206,7 @@ img {
     left: 50%;
     transform: translateX(-50%);
     display: flex;
+    z-index: 1;
 }
 
 .features-slider-controls label::after {
@@ -253,8 +263,7 @@ img {
 
 .services {
     border-bottom: 2px solid var(--basic-bg-grey);
-    padding-top: 87px;
-    padding-bottom: 73px;
+    padding: 80px 0;
 }
 
 .services-list {
@@ -280,20 +289,24 @@ img {
     line-height: 30px;
     text-transform: uppercase;
     margin: 0;
+    padding-top: 25px;
+    padding-bottom: 16px;
 }
 
 .services-list p {
     font: inherit;
     margin: 0;
+    max-width: 260px;
+    padding-bottom: 32px;
+
 }
 
 /* Buttons and Links */
 
 .link,
 .button {
-    font-family: inherit;
+    font: inherit;
     font-weight: 500;
-    font-size: 16px;
     line-height: 18px;
     color: var(--basic-white);
     text-transform: uppercase;
@@ -301,6 +314,26 @@ img {
     padding: 0;
     outline: none;
     border: none;
+}
+
+.features .link {
+    padding: 16px 54px;
+    display: inline-block;
+    margin-bottom: 95px;
+}
+
+.services .link {
+    padding: 17px 40px 15px 39px;
+    display: inline-block;
+}
+
+.contacts .link {
+    padding: 17px 45px 15px 44px;
+
+}
+
+.modal .button {
+    padding: 17px 83px 15px;
 }
 
 .link:active span,
@@ -353,11 +386,11 @@ img {
 /* Company */
 
 .company {
-    padding-top: 73px;
+    padding: 73px 0;
 }
 
 .company-desc {
-    font-family: inherit;
+    font: inherit;
     font-weight: 500;
     font-size: 45px;
     line-height: 47px;
@@ -399,7 +432,6 @@ img {
 
 .company-services-acc {
     font: inherit;
-    font-size: 16px;
     font-weight: 700;
     text-transform: uppercase;
     margin: 0;
@@ -421,15 +453,11 @@ img {
 
 .company-services-list dd {
     font: inherit;
-    font-size: 16px;
     line-height: 18px;
     color: var(--basic-dark-grey);
 }
 
 /* Clients */
-
-
-.clients {}
 
 .clients ul {
     border-top: 1px solid #EEEEEE;
@@ -459,7 +487,6 @@ img {
     width: 100%;
     object-fit: contain;
 }
-
 
 .clients ul li a:hover {
     opacity: 1;
@@ -506,13 +533,13 @@ img {
 
 .contacts p {
     font: inherit;
-    font-size: 16px;
     line-height: 18px;
     color: var(--basic-light-grey);
 }
 
 .contacts-phone {
     color: var(--basic-light-grey);
+    padding-bottom: 54px;
 }
 
 .contacts iframe {
@@ -569,7 +596,6 @@ img {
 
 .footer-text {
     font: inherit;
-    font-size: 16px;
     line-height: 22px;
     color: var(--basic-medium-grey);
 }
@@ -594,9 +620,11 @@ img {
 
 .modal-form-input-wrapper div {
     width: 50%;
+ 
+}
+.modal-form-input-wrapper div:nth-child(1){
     margin-right: 40px;
 }
-
 .modal-form-input-wrapper input {
     width: 100%;
 }
@@ -612,20 +640,17 @@ img {
 .contacts-form label {
     font: inherit;
     font-weight: 700;
-    font-size: 16px;
     line-height: 18px;
 }
 
 .contacts-form input::placeholder {
     font: inherit;
-    font-size: 16px;
     line-height: 18px;
     opacity: 0.5;
 }
 
 .contacts-form textarea::placeholder {
     font: inherit;
-    font-size: 16px;
     line-height: 18px;
     opacity: 0.5;
 }
@@ -669,17 +694,19 @@ img {
 }
 
 .modal {
-    position: relative;
+    position: fixed;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
     width: 100%;
     max-width: 960px;
     margin: 30px;
-    height: 590px;
+    min-height: 590px;
     opacity: 1;
     padding: 63px 100px;
     background-color: var(--basic-white);
+
+    display: none;
 }
 
 .modal-close {
@@ -704,4 +731,21 @@ img {
 
 .modal-close:active {
     opacity: 0.1;
+}
+
+.modal input {
+    padding: 16px;
+}
+
+.modal textarea {
+    padding: 16px;
+}
+
+
+input,textarea{
+    box-sizing: border-box;
+}
+.modal fieldset{
+    margin: 0;
+    padding: 0;
 }
