@@ -61,6 +61,7 @@
     --special-range-track: #D7DCDF;
     --special-toggle-shadow-grey: #CFCFCF;
     --special-marker-grey: #B8B8B8;
+    --special-marker-disabled: #EDEDED;
 }
 
 /* Global */
@@ -984,19 +985,31 @@ img {
 }
 
 .grid-list label:hover::after {
-    border-color: red;
+    border-color: var(--basic-type-input-gray);
 }
 
 .grid-list label:hover::before {
-    background: red;
+    background: var(--basic-type-input-gray);
 }
 
 .grid-list input:checked + label:hover::after {
-    border-color: red;
+    border-color: var(--basic-type-input-gray);
 }
 
 .grid-list input:checked + label:hover::before {
-    background: red;
+    background: var(--basic-type-input-gray);
+}
+
+.grid-list input:disabled + label::after {
+    border-color: var(--special-marker-disabled);
+}
+
+.grid-list input:disabled + label::before {
+    background: var(--special-marker-disabled);
+}
+
+.grid-list input:disabled + label {
+    opacity: 0.3;
 }
 
 .filter-form-grid {
@@ -1038,6 +1051,7 @@ img {
     background-repeat: no-repeat;
     background-position: center;
     background-size: contain;
+    opacity: 0.4;
 }
 
 .additions-list input:checked + label::after {
@@ -1045,6 +1059,23 @@ img {
     background-repeat: no-repeat;
     background-position: center;
     background-size: contain;
+    opacity: 0.4;
+}
+
+.additions-list label:hover::after {
+    opacity: 1;
+}
+
+.additions-list input:checked + label:hover::after {
+    opacity: 1;
+}
+
+.additions-list input:disabled + label::after {
+    opacity: 0.1;
+}
+
+.additions-list input:disabled + label {
+    opacity: 0.3;
 }
 
 .filter-form button {
@@ -1057,4 +1088,67 @@ img {
     padding: 17px 89px 15px 88px;
     text-transform: uppercase;
     text-align: center;
+}
+
+
+/* Templates */
+
+.templates {
+    margin-top: 55px;
+}
+
+.templates-filter {
+    margin-bottom: 89px;
+}
+
+.templates-filter p {
+    font: inherit;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 30px;
+    text-transform: uppercase;
+    margin-right: 266px;
+}
+
+.templates-filter-list {
+    list-style: none;
+    margin-left: 0;
+    display: flex;
+    margin-right: 47px;
+}
+
+.templates-filter-list li {
+    font: inherit;
+    font-size: 14px;
+    line-height: 18px;
+    text-transform: uppercase;
+    margin-right: 25px;
+}
+
+.templates-filter-list li:last-child {
+    margin-right: 0;
+}
+
+.templates-filter-list a {
+    color: var(--basic-black);
+}
+
+.templates-filter-controls {
+    list-style: none;
+    margin-left: 0;
+    display: flex;
+}
+
+.templates-filter-controls li {
+    margin-right: 18px;
+}
+
+.templates-filter-controls li:last-child {
+    margin-right: 0;
+}
+
+.templates-filter-wrapper {
+    display: flex;
+    align-items: center;
+    /* justify-content: space-between; */
 }
