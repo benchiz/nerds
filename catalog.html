@@ -99,7 +99,7 @@
                             </li>
                             <li>
                                 <input class="visually-hidden" type="radio" name="grid" value="liquid"
-                                    id="filter-liquid"checked disabled>
+                                    id="filter-liquid" checked>
                                 <label for="filter-liquid">Резиновая</label>
                             </li>
                         </ul>
@@ -125,7 +125,7 @@
                                 <label for="filter-gallery">Галерея</label>
                             </li>
                             <li>
-                                <input class="visually-hidden" type="checkbox" name="bin" id="filter-bin" checked disabled>
+                                <input class="visually-hidden" type="checkbox" name="bin" id="filter-bin">
                                 <label for="filter-bin">Корзина</label>
                             </li>
                         </ul>
@@ -144,7 +144,7 @@
                         <p>Сортировать:</p>
                         <ul class="templates-filter-list">
                             <li>
-                                <a href="#">По цене</a>
+                                <a class="templates-filter-list-active" href="#">По цене</a>
                             </li>
                             <li>
                                 <a href="#">По типу</a>
@@ -155,78 +155,100 @@
                         </ul>
                         <ul class="templates-filter-controls">
                             <li>
-                                <svg width="11" height="10" viewBox="0 0 11 10" fill="none"
-                                    xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M5.5 10L0 0H11" fill="#231F20" />
-                                </svg>
+                                <a class="templates-filter-controls-link templates-filter-controls-active">
+                                    <svg width="11" height="10" viewBox="0 0 11 10" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <g opacity="0.2">
+                                            <path d="M5.5 10L0 0H11" fill="#A6A6A6" />
+                                        </g>
+                                    </svg>
+                                </a>
                             </li>
                             <li>
-                                <svg width="11" height="10" viewBox="0 0 11 10" fill="none"
-                                    xmlns="http://www.w3.org/2000/svg">
-                                    <g opacity="0.2">
-                                        <path d="M5.5 0L0 10H11L5.5 0Z" fill="#A6A6A6" />
-                                    </g>
-                                </svg>
+                                <a class="templates-filter-controls-link">
+                                    <svg width="11" height="10" viewBox="0 0 11 10" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <g opacity="0.2">
+                                            <path d="M5.5 0L0 10H11L5.5 0Z" fill="#A6A6A6" />
+                                        </g>
+                                    </svg>
+                                </a>
                             </li>
                         </ul>
                     </div>
                 </div>
             </section>
 
-            <ul>
-                <li>
-                    <h3><a href="#">Sedona</a></h3>
-                    <p>Информационный сайт<br> для туристов</p>
-                    <a href="#">9 900 ₽</a>
-                    <img src="img/sedona-preview.jpg" alt="Сайт Седона" width="358" height="578">
-                </li>
-                <li>
-                    <h3><a href="#">Pink app</a></h3>
-                    <p>Продуктовый лендинг<br> приложения для iOS и Android</p>
-                    <a href="#">9 900 ₽</a>
-                    <img src="img/pink-preview.jpg" alt="Сайт Pink" width="358" height="578">
-                </li>
-                <li>
-                    <h3><a href="#">Barbershop</a></h3>
-                    <p>Сайт салона красоты.<br> Для мужчин, да.</p>
-                    <a href="#">9 900 ₽</a>
-                    <img src="img/barbershop-preview.jpg" alt="Сайт Барбершоп «Бородинский»" width="358" height="578">
-                </li>
-                <li>
-                    <h3><a href="#">Mishka</a></h3>
-                    <p>Интернет-магазин<br> вязаных игрушек</p>
-                    <a href="#">9 900 ₽</a>
-                    <img src="img/mishka-preview.jpg" alt="Сайт Mishka" width="358" height="578">
+            <section class="templates-preview">
+                <div class="container">
+                    <ul class="templates-preview-list">
+                        <li class="templates-preview-item">
+                            <div class="templates-preview-item-info">
+                                <h3><a href="#">Sedona</a></h3>
+                                <p>Информационный сайт<br> для туристов</p>
+                                <a class="templates-preview-item-price" href="#">9 900 ₽</a>
+                            </div>
+                            <img class="templates-preview-item-photo" src="img/sedona-preview.jpg" alt="Сайт Седона" width="358" height="578">
+                        </li>
+                        <li class="templates-preview-item">
+                            <div class="templates-preview-item-info">
+                                <h3><a href="#">Pink app</a></h3>
+                                <p>Продуктовый лендинг<br> приложения для iOS и Android</p>
+                                <a class="templates-preview-item-price" href="#">9 900 ₽</a>
+                            </div>
+                            <img class="templates-preview-item-photo" src="img/pink-preview.jpg" alt="Сайт Pink" width="358" height="578">
+                        </li>
+                        <li class="templates-preview-item">
+                            <div class="templates-preview-item-info">
+                                <h3><a href="#">Barbershop</a></h3>
+                                <p>Сайт салона красоты.<br> Для мужчин, да.</p>
+                                <a class="templates-preview-item-price" href="#">9 900 ₽</a>
+                            </div>
+                            <img class="templates-preview-item-photo" src="img/barbershop-preview.jpg" alt="Сайт Барбершоп «Бородинский»" width="358"
+                                height="578">
+                        </li>
+                        <li class="templates-preview-item">
+                            <div class="templates-preview-item-info">
+                                <h3><a href="#">Mishka</a></h3>
+                                <p>Интернет-магазин<br> вязаных игрушек</p>
+                                <a class="templates-preview-item-price" href="#">9 900 ₽</a>
+                            </div>
+                            <img class="templates-preview-item-photo" src="img/mishka-preview.jpg" alt="Сайт Mishka" width="358" height="578">
+                        </li>
+                        <li class="templates-preview-item">
+                            <div class="templates-preview-item-info">
+                                <h3><a href="#">A Plus</a></h3>
+                                <p>Лендинг курсов повышения<br> квалификации</p>
+                                <a class="templates-preview-item-price" href="#">9 900 ₽</a>
+                            </div>
+                            <img class="templates-preview-item-photo" src="img/aplus-preview.jpg" alt="Сайт A+" width="358" height="578">
+                        </li>
+                        <li class="templates-preview-item">
+                            <div class="templates-preview-item-info">
+                                <h3><a href="#">Кваст</a></h3>
+                                <p>Промо-сайт производителя<br> крафтового кваса</p>
+                                <a class="templates-preview-item-price" href="#">9 900 ₽</a>
+                            </div>
+                            <img class="templates-preview-item-photo" src="img/kvast-preview.jpg" alt="Сайт Кваст" width="358" height="578">
+                        </li>
+                    </ul>
 
-                </li>
-                <li>
-                    <h3><a href="#">A Plus</a></h3>
-                    <p>Лендинг курсов повышения<br> квалификации</p>
-                    <a href="#">9 900 ₽</a>
-                    <img src="img/aplus-preview.jpg" alt="Сайт A+" width="358" height="578">
-                </li>
-                <li>
-                    <h3><a href="#">Кваст</a></h3>
-                    <p>Промо-сайт производителя<br> крафтового кваса</p>
-                    <a href="#">9 900 ₽</a>
-                    <img src="img/kvast-preview.jpg" alt="Сайт Кваст" width="358" height="578">
-                </li>
-            </ul>
-
-            <ul>
-                <li>
-                    <a>1</a>
-                </li>
-                <li>
-                    <a href="#">2</a>
-                </li>
-                <li>
-                    <a href="#">3</a>
-                </li>
-                <li>
-                    <a href="#">Следующая</a>
-                </li>
-            </ul>
+                    <ul>
+                        <li>
+                            <a>1</a>
+                        </li>
+                        <li>
+                            <a href="#">2</a>
+                        </li>
+                        <li>
+                            <a href="#">3</a>
+                        </li>
+                        <li>
+                            <a href="#">Следующая</a>
+                        </li>
+                    </ul>
+                </div>
+            </section>
         </section>
 
         <section class="contacts">
