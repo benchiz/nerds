@@ -214,7 +214,7 @@ img {
 }
 
 .features img {
-    background: var(--basic-dark-grey);
+    background: var(--basic-bg-grey);
     position: absolute;
     bottom: 0;
     right: 10%;
@@ -497,7 +497,11 @@ img {
     margin: 0;
     padding-top: 37px;
     padding-bottom: 31px;
-    /* text-align: center; */
+    text-align: center;
+}
+
+.company-services-list {
+    display: flex;
 }
 
 .company-services-list dt {
@@ -506,6 +510,7 @@ img {
     line-height: 64px;
     font-weight: 700;
     padding-bottom: 10px;
+    text-align: right;
 }
 
 .company-services-list sup {
@@ -520,6 +525,16 @@ img {
     line-height: 18px;
     color: var(--basic-dark-grey);
 }
+
+.company-wrapper {
+    display: flex;
+}
+
+.company-desc-block {
+    margin-right: 150px;
+}
+
+
 
 /* Clients */
 
@@ -1347,6 +1362,7 @@ img {
     display: flex;
     list-style: none;
     margin-left: 0;
+    padding-left: 0;
 }
 
 .templates-pagination a {
@@ -1358,7 +1374,24 @@ img {
     padding: 17px 20px;
 }
 
-.templates-pagination a:nth-child(4) {
+.templates-pagination .active-page {
+    background: var(--basic-white);
+    border: 3px solid var(--basic-pagination-border);
+    border-radius: 3px;
+    pointer-events: none;
+}
+
+.templates-pagination a:hover {
+    background: var(--special-link-hover-grey);
+}
+
+.templates-pagination a:active {
+    opacity: 0.3;
+    background: var(--special-link-active-grey);
+    box-shadow: inset 0px 3px 0px rgba(0, 1, 1, 0.1);
+}
+
+.templates-pagination .next-page {
     padding: 17px 78px;
 }
 
