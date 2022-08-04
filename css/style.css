@@ -29,6 +29,13 @@
 
 /* Variables */
 
+
+.fsdf{
+    left: 50%;
+    top: 50%;
+    transform: translate(calc(-50% - 500px), -50%);
+}
+
 :root {
     --basic-black: #000000;
     --basic-dark-grey: #283136;
