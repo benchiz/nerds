@@ -3,14 +3,14 @@
 
 <head>
   <meta charset="UTF-8">
-  <title>Нёрдс</title>
+  <title>Каталог Нёрдс</title>
   <link rel="stylesheet" href="css/normalize.css">
   <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
   <header>
-    <a>
+    <a href="index.html">
       <svg width="168" height="74" viewBox="0 0 168 74" fill="none" xmlns="http://www.w3.org/2000/svg">
         <g filter="url(#filter0_d_3_62)">
           <path fill-rule="evenodd" clip-rule="evenodd"
@@ -35,7 +35,7 @@
       </ul>
       <ul>
         <li>
-          <a href="catalog.html">Магазин</a>
+          <a>Магазин</a>
         </li>
       </ul>
       <ul>
@@ -47,112 +47,177 @@
     </nav>
   </header>
   <main>
-    <h1>Дизайн-студия Нёрдс</h1>
-    <section>
-      <h2>Преимущества</h2>
-      <div class="swiper">
-        <div class="swiper-wrapper">
-          <div class="swiper-slide">
-            <p>Долго, дорого,<br> скрупулезно.</p>
-            <p>Математически выверенный дизайн<br> для вашего сайта или мобильного приложения.</p>
-            <img src="img/smartphones-bg.png" alt="Смартфоны" width="760" height="431">
+    <div>
+      <h1>Магазин готовых шаблонов</h1>
+    </div>
+    <div>
+      <section>
+        <h2>Шаблоны</h2>
+        <div>
+          <div>
+            <form action="https://echo.htmlacademy.ru" method="GET">
+              <fieldset>
+                <legend>Стоимость:</legend>
+                <div>
+                  <div>
+                    <div>
+                      <div></div>
+                    </div>
+                    <div></div>
+                    <div></div>
+                  </div>
+                  <div>
+                    <label>
+                      от <input type="number" name="min-price" value="0">
+                    </label>
+                    <label>
+                      до <input type="number" name="max-price" value="15000">
+                    </label>
+                  </div>
+                </div>
+              </fieldset>
+              <fieldset>
+                <legend>Сетка:</legend>
+                <ul>
+                  <li>
+                    <input type="radio" name="grid" value="adaptive" id="filter-adaptive" checked>
+                    <label for="filter-adaptive">Адаптивная</label>
+                  </li>
+                  <li>
+                    <input type="radio" name="grid" value="fixed" id="filter-fixed">
+                    <label for="filter-fixed">Фиксированная</label>
+                  </li>
+                  <li>
+                    <input type="radio" name="grid" value="rubber" id="filter-rubber">
+                    <label for="filter-rubber">Резиновая</label>
+                  </li>
+                </ul>
+              </fieldset>
+              <fieldset>
+                <legend>Особенности:</legend>
+                <ul>
+                  <li>
+                    <input type="checkbox" name="slider" id="filter-slider" checked>
+                    <label for="filter-slider">Слайдер</label>
+                  </li>
+                  <li>
+                    <input type="checkbox" name="advantages" id="filter-advantage">
+                    <label for="filter-advantage">Блок преимуществ</label>
+                  </li>
+                  <li>
+                    <input type="checkbox" name="news" id="filter-news" checked>
+                    <label for="filter-news">Новости</label>
+                  </li>
+                  <li>
+                    <input type="checkbox" name="gallery" id="filter-gallery">
+                    <label for="filter-gallery">Галерея</label>
+                  </li>
+                  <li>
+                    <input type="checkbox" name="bin" id="filter-bin">
+                    <label for="filter-bin">Корзина</label>
+                  </li>
+                </ul>
+              </fieldset>
+              <button type="submit">Показать</button>
+            </form>
           </div>
-          <div class="swiper-slide">
-            <p>Любим математику<br> как никто другой</p>
-            <p>Никакого креатива, только математические формулы<br> для расчета идеальных пропорций</p>
-            <img src="img/smartphones-bg.png" alt="Моноблоки" width="760" height="431">
-          </div>
-          <div class="swiper-slide">
-            <p>Только ночь, только хардкор</p>
-            <p>Работать днем, как все? Мы против этого.
-              Ближе к полуночи работа только начинается.</p>
-            <img src="img/gadgets-bg.png" alt="Гаджеты" width="760" height="431">
+          <div>
+            <div>
+              <p>Сортировать:</p>
+              <ul>
+                <li>По цене</li>
+                <li>По типу</li>
+                <li>По названию</li>
+              </ul>
+              <ul>
+                <li>
+                  <a>
+                    <svg width="11" height="10" viewBox="0 0 11 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M5.5 10L0 0H11" fill="#231F20" />
+                    </svg>
+                  </a>
+                </li>
+                <li>
+                  <a href="#">
+                    <svg width="11" height="10" viewBox="0 0 11 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <g opacity="0.2">
+                        <path d="M5.5 0L0 10H11L5.5 0Z" fill="#A6A6A6" />
+                      </g>
+                    </svg>
+                  </a>
+                </li>
+              </ul>
+            </div>
+            <div>
+              <ul>
+                <li>
+                  <div>
+                    <h3><a href="#">Sedona</a></h3>
+                    <p>Информационный сайт<br> для туристов</p>
+                    <a href="#">9 900 ₽</a>
+                  </div>
+                  <img src="img/sedona.png" alt="Sedona" width="358" height="578">
+                </li>
+                <li>
+                  <div>
+                    <h3><a href="#">Pink App</a></h3>
+                    <p>Продуктовый лендинг<br> приложения для iOS и Android</p>
+                    <a href="#">9 900 ₽</a>
+                  </div>
+                  <img src="img/pink.png" alt="Pink App" width="358" height="578">
+                </li>
+                <li>
+                  <div>
+                    <h3><a href="#">Barbershop</a></h3>
+                    <p>Сайт салона красоты.<br> Для мужчин, да.</p>
+                    <a href="#">9 900 ₽</a>
+                  </div>
+                  <img src="img/barbershop.png" alt="Barbershop" width="358" height="578">
+                </li>
+                <li>
+                  <div>
+                    <h3><a href="#">Mishka</a></h3>
+                    <p>Интернет-магазин<br> вязаных игрушек</p>
+                    <a href="#">9 900 ₽</a>
+                  </div>
+                  <img src="img/mishka.png" alt="Mishka" width="358" height="578">
+                </li>
+                <li>
+                  <div>
+                    <h3><a href="#">A Plus</a></h3>
+                    <p>Лендинг курсов повышения<br> квалификации</p>
+                    <a href="#">9 900 ₽</a>
+                  </div>
+                  <img src="img/a-plus.png" alt="A Plus" width="358" height="578">
+                </li>
+                <li>
+                  <div>
+                    <h3><a href="#">Кваст</a></h3>
+                    <p>Промо-сайт производителя<br> крафтового кваса</p>
+                    <a href="#">9 900 ₽</a>
+                  </div>
+                  <img src="img/kvast.png" alt="Кваст" width="358" height="578">
+                </li>
+              </ul>
+            </div>
           </div>
         </div>
-        <a href="#">Узнать больше</a>
-        <div class="swiper-pagination"></div>
-      </div>
-    </section>
-    <section>
-      <h2>Услуги</h2>
-      <div>
         <ul>
           <li>
-            <img src="img/notebook.png" alt="Ноутбук" width="300" height="146">
-            <h3>Веб-сайты</h3>
-            <p>Мир никогда не будет прежним после того как увидит ваш сайт!</p>
-            <a href="#">Заказать</a>
+            <a>1</a>
           </li>
           <li>
-            <img src="img/smartphones.png" alt="Смартфоны" width="300" height="146">
-            <h3>Приложения</h3>
-            <p>Покорите топ-10 приложений в AppStore и Google Play</p>
-            <a href="#">Заказать</a>
+            <a href="#">2</a>
           </li>
           <li>
-            <img src="img/presentation.png" alt="Презентационная доска" width="300" height="146">
-            <h3>Презентации</h3>
-            <p>Вы даже не подозреваете, насколько вы изумительны!</p>
-            <a href="#">Заказать</a>
+            <a href="#">3</a>
+          </li>
+          <li>
+            <a href="#">Следующая</a>
           </li>
         </ul>
-      </div>
-    </section>
-    <section>
-      <h2>Описание студии</h2>
-      <div>
-        <div>
-          <p>Мы — маленькая, но гордая дизайн-студия из Краснодара.</p>
-          <p>Исповедуем принципы минимализма и чистоты. Ставим математический расчет превыше креатива. Работаем не
-            покладая рук, как роботы.</p>
-          <p>Выполняем заказы на разработку:</p>
-          <ul>
-            <li>Веб-сайтов любой сложности</li>
-            <li>Мобильных приложений для iOS и Android</li>
-            <li>Слайдшоу и видео для корпоративных презентаций</li>
-          </ul>
-        </div>
-        <div>
-          <img src="img/nerds.png" alt="Нёрдс" width="360" height="208">
-          <p>с 2004 года Любим точность во всем:</p>
-          <dl>
-            <dt>146<sup>%</sup></dt>
-            <dd>Уровень самоотдачи</dd>
-            <dt>100<sup>%</sup></dt>
-            <dd>Соблюдение сроков</dd>
-            <dt>50<sup>%</sup></dt>
-            <dd>Минимальная предоплата</dd>
-          </dl>
-        </div>
-      </div>
-    </section>
-    <section>
-      <h2>Клиенты</h2>
-      <div>
-        <ul>
-          <li>
-            <a href="https://htmlacademy.ru/intensive/htmlcss">
-              <img src="img/logo/hmtlacademy-logo.svg" alt="HTML Academy" width="199" height="57">
-            </a>
-          </li>
-          <li>
-            <a href="#">
-              <img src="img/logo/barbershop-logo.svg" alt="Барбершоп &laquo;Бородинский&raquo;" width="209" height="90">
-            </a>
-          </li>
-          <li>
-            <a href="#">
-              <img src="img/logo/pink-logo.svg" alt="Pink" width="185" height="52">
-            </a>
-          </li>
-          <li>
-            <a href="#">
-              <img src="img/logo/mishka-logo.svg" alt="Mishka" width="173" height="64">
-            </a>
-          </li>
-        </ul>
-      </div>
-    </section>
+      </section>
+    </div>
     <section>
       <h2>Контакты</h2>
       <div>
@@ -235,12 +300,9 @@
       </p>
       <p>
         <label for="text-letter">Текст письма:</label>
-        <textarea name="letter" id="text-letter" cols="30" rows="10" placeholder="В свободной форме"></textarea>
+        <textarea id="text-letter" name="letter" cols="30" rows="10" placeholder="В свободной форме"></textarea>
       </p>
       <button type="submit">Отправить</button>
     </form>
     <button type="button">Закрыть</button>
   </section>
-</body>
-
-</html>
