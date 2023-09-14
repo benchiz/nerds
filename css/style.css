@@ -1,0 +1,350 @@
+/* Fonts */
+
+@font-face {
+  font-family: "Roboto";
+  font-weight: 400;
+  font-style: normal;
+  src: local("Roboto"),
+    url(../fonts/roboto.woff2) format("woff2"),
+    url(../fonts/roboto.woff) format("woff");
+}
+
+@font-face {
+  font-family: "Roboto";
+  font-weight: 500;
+  font-style: normal;
+  src: local("Roboto Medium"),
+    url(../fonts/robotomedium.woff2) format("woff2"),
+    url(../fonts/robotomedium.woff) format("woff");
+}
+
+@font-face {
+  font-family: "Roboto";
+  font-weight: 700;
+  font-style: normal;
+  src: local("Roboto Bold"),
+    url(../fonts/robotobold.woff2) format("woff2"),
+    url(../fonts/robotobold.woff) format("woff");
+}
+
+/* Variables */
+
+:root {
+  --basic-black: #000000;
+  --basic-white: #FFFFFF;
+  --basic-bg-grey: #EEEEEE;
+  --basic-light-grey: #666666;
+  --basic-medium-grey: #444444;
+  --basic-dark-grey: #283136;
+  --basic-light-red: #FB565A;
+  --basic-light-green: #00CA74;
+  --basic-yellow: #EFC849;
+
+  --special-social-gradient-grey: #E1E1E1;
+  --special-border-light-grey: #D7DCDE;
+}
+
+/* Global */
+
+.page {
+  height: 100%;
+}
+
+.page-body {
+  font-family: "Roboto", "Arial", sans-serif;
+  margin: 0;
+  padding: 0;
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 400;
+  color: var(--basic-black);
+  background-color: var(--basic-white);
+  min-width: 375px;
+  min-height: 100%;
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+ul,
+ol {
+  list-style: none;
+}
+
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+.container {
+  margin: 0 auto;
+  box-sizing: border-box;
+  max-width: 1440px;
+  padding: 0 140px;
+}
+
+/* Visually hidden */
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  white-space: nowrap;
+  border: 0;
+  clip: rect(0 0 0 0);
+  clip-path: inset(100%);
+}
+
+/* Main navigation */
+
+.main-header {
+  background-color: var(--basic-bg-grey);
+}
+
+.main-nav__list a {
+  font: inherit;
+  font-weight: 500;
+  line-height: 30px;
+  text-transform: uppercase;
+  color: var(--basic-black);
+}
+
+.main-nav__cart-text {
+  font: inherit;
+  font-weight: 500;
+  line-height: 30px;
+  text-transform: uppercase;
+  color: var(--basic-black);
+}
+
+/* Advantages */
+
+.advantages {
+  background-color: var(--basic-bg-grey);
+  padding-top: 78px;
+}
+
+.advantages-swiper-slide__desc {
+  font: inherit;
+  font-weight: 500;
+  font-size: 55px;
+  line-height: 55px;
+}
+
+.advantages-swiper-slide__text {
+  font: inherit;
+  color: var(--basic-dark-grey);
+}
+
+.advantages-order__button {
+  font: inherit;
+  font-weight: 500;
+  line-height: 18px;
+  text-transform: uppercase;
+  color: var(--basic-white);
+  background-color: var(--basic-light-red);
+}
+
+/* Services */
+
+.services {
+  border-bottom: 2px solid var(--basic-bg-grey);
+}
+
+.services__list-item h3 {
+  font: inherit;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 30px;
+  text-transform: uppercase;
+}
+
+.services__list-item p {
+  font: inherit;
+  color: var(--basic-dark-grey);
+}
+
+.services-order__button {
+  font: inherit;
+  font-weight: 500;
+  line-height: 18px;
+  text-transform: uppercase;
+  color: var(--basic-white);
+}
+
+.services-order__button_red {
+  background-color: var(--basic-light-red);
+}
+
+.services-order__button_green {
+  background-color: var(--basic-light-green);
+}
+
+.services-order__button_yellow {
+  background-color: var(--basic-yellow);
+}
+
+/* Studio */
+
+.studio__info-desc {
+  font: inherit;
+  font-weight: 500;
+  font-size: 45px;
+  line-height: 45px;
+}
+
+.studio__info-text {
+  font: inherit;
+  color: var(--basic-dark-grey);
+}
+
+.studio h3 {
+  font: inherit;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: var(--basic-dark-grey);
+}
+
+.studio__desc-list {
+  font: inherit;
+  color: var(--basic-dark-grey);
+}
+
+.studio__desc-list li {
+  padding-bottom: 25px;
+}
+
+.studio__desc-list li:last-child {
+  padding-bottom: 0;
+}
+
+.studio__advantages p {
+  font: inherit;
+  font-weight: 700;
+  color: var(--basic-black);
+  text-transform: uppercase;
+}
+
+.studio__advantages-list p {
+  font: inherit;
+  font-weight: 700;
+  font-size: 45px;
+  line-height: 64px;
+}
+
+.studio__advantages-list sup {
+  font: inherit;
+  font-size: 26px;
+  line-height: 40px;
+}
+
+.studio__advantages-list span {
+  font: inherit;
+  line-height: 18px;
+  color: var(--basic-dark-grey);
+}
+
+
+/* Clients */
+
+.clients {
+  border-top: 2px solid var(--basic-bg-grey);
+  border-bottom: 2px solid var(--basic-bg-grey);
+}
+
+/* Contacts */
+
+.contacts {
+  background: url("../img/map.png"), url("../img/map-marker.png") no-repeat;
+}
+
+.contacts__info h2 {
+  font: inherit;
+  font-weight: 700;
+  font-size: 18px ;
+  line-height: 30px;
+  text-transform: uppercase;
+}
+
+
+.contact__info p {
+  font: inherit;
+  line-height: 18px;
+  color: var(--basic-light-grey);
+}
+
+.contacts__phone {
+  font: inherit;
+  line-height: 18px;
+  color: var(--basic-light-grey);
+}
+
+.contacts__modal {
+  font: inherit;
+  line-height: 18px;
+  color: var(--basic-white);
+  background-color: var(--basic-light-red);
+  text-transform: uppercase;
+  border: none;
+}
+
+/* Footer */
+
+.main-footer__slogan {
+  font: inherit;
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 36px;
+}
+
+.main-footer__text {
+  font: inherit;
+  line-height: 22px;
+  color: var(--basic-medium-grey);
+}
+
+/* Modal */
+.modal p {
+  font: inherit;
+  font-size: 45px;
+  line-height: 52px;
+  font-weight: 700;
+}
+
+.modal label {
+  font: inherit;
+  font-size: 16px;
+  line-height: 18px;
+}
+
+.modal input::placeholder {
+  font: inherit;
+  font-size: 16px;
+  line-height: 18px;
+  color: var(--basic-medium-grey);
+}
+
+.modal textarea::placeholder {
+  font: inherit;
+  font-size: 16px;
+  line-height: 18px;
+  color: var(--basic-medium-grey);
+}
+
+.btn {
+  font: inherit;
+  line-height: 18px;
+  color: var(--basic-white);
+  text-transform: uppercase;
+  border: none;
+  background-color: var(--basic-light-red);
+}
