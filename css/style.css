@@ -114,6 +114,7 @@ ol {
 /* Link */
 
 .link {
+  display: inline-block;
   font: inherit;
   color: var(--basic-white);
   text-transform: uppercase;
@@ -237,7 +238,7 @@ ol {
 }
 
 .services .link {
-  padding: 17px 40px 15px 39px;
+  padding: 15px 40px;
   line-height: 18px;
 }
 
@@ -329,7 +330,6 @@ ol {
   color: var(--basic-dark-grey);
 }
 
-
 /* Clients */
 
 .clients {
@@ -400,26 +400,22 @@ ol {
 /* Footer */
 
 .main-footer__social-list a {
-  width: 81px;
-  height: 81px;
+  width: 80px;
+  height: 80px;
   border-radius: 50%;
-  transform: 0.3s ease;
+  transition: 0.3s ease;
   display: flex;
   align-items: center;
   justify-content: center;
-  background: linear-gradient(0deg, var(--special-social-gradient-grey),
-      var(--special-social-gradient-grey)), var(--basic-white);
+  background: var(--special-social-gradient-grey);
+
 }
 
 .main-footer__social-list a:hover {
-  background: linear-gradient(0deg, var(--special-hover-red), var(--special-hover-red)), var(--basic-white);
+  background: var(--special-hover-red);
 }
 
-.main-footer__social-list a:active {
-  background: linear-gradient(0deg, var(--special-active-red), var(--special-active-red)), var(--basic-white);
-}
-
-.main-footer__social-list a:active svg {
+.main-footer__social-list a:active img {
   opacity: 0.3;
 }
 
