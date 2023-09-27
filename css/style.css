@@ -32,16 +32,16 @@
 :root {
   --basic-black: #000000;
   --basic-white: #FFFFFF;
-  --basic-bg-grey: #EEEEEE;
-  --basic-light-grey: #666666;
-  --basic-medium-grey: #444444;
-  --basic-dark-grey: #283136;
+  --basic-bg-gray: #EEEEEE;
+  --basic-light-gray: #666666;
+  --basic-medium-gray: #444444;
+  --basic-dark-gray: #283136;
   --basic-light-red: #FB565A;
   --basic-light-green: #00CA74;
   --basic-yellow: #EFC849;
 
-  --special-social-gradient-grey: #E1E1E1;
-  --special-border-light-grey: #D7DCDE;
+  --special-social-gradient-gray: #E1E1E1;
+  --special-border-light-gray: #D7DCDE;
 
   --special-hover-red: #E74246;
   --special-active-red: #D7373B;
@@ -49,6 +49,7 @@
   --special-active-green: #00AA62;
   --special-hover-yellow: #EAB534;
   --special-active-yellow: #E5A722;
+  --special-hover-gray: #B4B9BB;
 }
 
 /* Global */
@@ -135,7 +136,7 @@ ol {
 /* Main navigation */
 
 .main-header {
-  background-color: var(--basic-bg-grey);
+  background-color: var(--basic-bg-gray);
 }
 
 .main-header__logo:hover {
@@ -183,7 +184,7 @@ ol {
 /* Advantages */
 
 .advantages {
-  background-color: var(--basic-bg-grey);
+  background-color: var(--basic-bg-gray);
   padding-top: 78px;
 }
 
@@ -196,7 +197,7 @@ ol {
 
 .advantages-swiper-slide__text {
   font: inherit;
-  color: var(--basic-dark-grey);
+  color: var(--basic-dark-gray);
 }
 
 .advantages .link {
@@ -220,7 +221,7 @@ ol {
 /* Services */
 
 .services {
-  border-bottom: 2px solid var(--basic-bg-grey);
+  border-bottom: 2px solid var(--basic-bg-gray);
 }
 
 .services__list-item h3 {
@@ -233,7 +234,7 @@ ol {
 
 .services__list-item p {
   font: inherit;
-  color: var(--basic-dark-grey);
+  color: var(--basic-dark-gray);
 }
 
 .services .link {
@@ -280,19 +281,19 @@ ol {
 
 .studio__info-text {
   font: inherit;
-  color: var(--basic-dark-grey);
+  color: var(--basic-dark-gray);
 }
 
 .studio h3 {
   font: inherit;
   font-weight: 700;
   text-transform: uppercase;
-  color: var(--basic-dark-grey);
+  color: var(--basic-dark-gray);
 }
 
 .studio__desc-list {
   font: inherit;
-  color: var(--basic-dark-grey);
+  color: var(--basic-dark-gray);
 }
 
 .studio__desc-list li {
@@ -326,15 +327,15 @@ ol {
 .studio__advantages-list span {
   font: inherit;
   line-height: 18px;
-  color: var(--basic-dark-grey);
+  color: var(--basic-dark-gray);
 }
 
 
 /* Clients */
 
 .clients {
-  border-top: 2px solid var(--basic-bg-grey);
-  border-bottom: 2px solid var(--basic-bg-grey);
+  border-top: 2px solid var(--basic-bg-gray);
+  border-bottom: 2px solid var(--basic-bg-gray);
 }
 
 .clients__list a {
@@ -355,6 +356,12 @@ ol {
   background: url("../img/map.png"), url("../img/map-marker.png") no-repeat;
 }
 
+.contacts__info {
+  width: 320px;
+  background-color: var(--basic-white);
+  text-align: center;
+}
+
 .contacts__info h2 {
   font: inherit;
   font-weight: 700;
@@ -366,13 +373,13 @@ ol {
 .contact__info p {
   font: inherit;
   line-height: 18px;
-  color: var(--basic-light-grey);
+  color: var(--basic-light-gray);
 }
 
 .contacts__phone {
   font: inherit;
   line-height: 18px;
-  color: var(--basic-light-grey);
+  color: var(--basic-light-gray);
 }
 
 .contacts__modal {
@@ -407,8 +414,8 @@ ol {
   display: flex;
   align-items: center;
   justify-content: center;
-  background: linear-gradient(0deg, var(--special-social-gradient-grey),
-      var(--special-social-gradient-grey)), var(--basic-white);
+  background: linear-gradient(0deg, var(--special-social-gradient-gray),
+      var(--special-social-gradient-gray)), var(--basic-white);
 }
 
 .main-footer__social-list a:hover {
@@ -433,7 +440,7 @@ ol {
 .main-footer__text {
   font: inherit;
   line-height: 22px;
-  color: var(--basic-medium-grey);
+  color: var(--basic-medium-gray);
 }
 
 /* Modal */
@@ -451,16 +458,109 @@ ol {
   line-height: 18px;
 }
 
+.modal input {
+  font: inherit;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 18px;
+  color: var(--basic-black);
+  border: 2px solid var(--special-border-light-gray);
+}
+
+.modal input:hover {
+  border: 2px solid var(--special-hover-gray);
+}
+
+.modal input:active {
+  border: 2px solid var(--basic-black);
+}
+
 .modal input::placeholder {
   font: inherit;
   font-size: 16px;
   line-height: 18px;
-  color: var(--basic-medium-grey);
+  color: var(--basic-medium-gray);
+  opacity: 0.5;
+}
+
+.modal input:hover::placeholder {
+  border-color: var(--special-hover-gray);
+}
+
+.modal input:focus::placeholder {
+  color: var(--basic-medium-gray);
+  border-color: var(--basic-black);
+  opacity: 1;
+}
+
+.modal input:focus {
+  color: var(--basic-medium-gray);
+}
+
+.modal textarea {
+  font: inherit;
+  font-size: 16px;
+  line-height: 18px;
+  font-weight: 400;
+  color: var(--basic-black);
+  resize: none;
+  outline: none;
 }
 
 .modal textarea::placeholder {
   font: inherit;
   font-size: 16px;
   line-height: 18px;
-  color: var(--basic-medium-grey);
+  font-weight: 400;
+  color: var(--basic-medium-gray);
+  opacity: 0.5;
+}
+
+.modal textarea:focus::placeholder {
+  color: var(--basic-black);
+  opacity: 1;
+}
+
+.modal input:invalid:not(:placeholder-shown) {
+  border: 2px solid var(--special-hover-red);
+  color: var(--special-hover-red);
+}
+
+.button {
+  font: inherit;
+  color: var(--basic-white);
+  text-transform: uppercase;
+  border: none;
+}
+
+.button_red {
+  background-color: var(--basic-light-red);
+}
+
+.contacts__form .button_red:hover {
+  background-color: var(--special-hover-red);
+}
+
+.contacts__form .button_red:active {
+  background-color: var(--special-active-red);
+}
+
+/* Сatalog */
+
+.active {
+  border-bottom: 2px solid var(--basic-light-red);
+}
+
+.title {
+  background-color: var(--basic-bg-gray);
+  padding-top: 57px;
+  padding-bottom: 108px;
+}
+
+.main-title {
+  font: inherit;
+  font-weight: 500;
+  font-size: 55px;
+  line-height: 57px;
+  text-align: center;
 }
