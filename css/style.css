@@ -39,10 +39,11 @@
   --basic-light-red: #FB565A;
   --basic-light-green: #00CA74;
   --basic-yellow: #EFC849;
+  --basic-range-dot-gray: #ABABAB;
 
   --special-social-gradient-gray: #E1E1E1;
   --special-border-light-gray: #D7DCDE;
-
+  --special-toggle-shadow-gray: #CFCFCF;
   --special-hover-red: #E74246;
   --special-active-red: #D7373B;
   --special-hover-green: #00BC6C;
@@ -88,6 +89,10 @@ ol {
 *::before,
 *::after {
   box-sizing: border-box;
+}
+
+fieldset {
+  border: none;
 }
 
 .container {
@@ -414,15 +419,19 @@ ol {
   display: flex;
   align-items: center;
   justify-content: center;
-  background: var(--special-social-gradient-grey);
+  background: var(--special-social-gradient-gray);
 }
 
 .main-footer__social-list a:hover {
-  background: var(--special-hover-red);
+  background: linear-gradient(0deg, var(--special-hover-red), var(--special-hover-red)), var(--basic-white);
 }
 
-.main-footer__social-list a:active img {
-  opacity: 0.3;
+.main-footer__social-list a:active {
+  background: linear-gradient(0deg, var(--special-active-red), var(--special-active-red)), var(--basic-white);
+}
+
+.main-footer__social-list a:active svg {
+  opacity: 0.1;
 }
 
 .main-footer__slogan {
@@ -558,4 +567,96 @@ ol {
   font-size: 55px;
   line-height: 57px;
   text-align: center;
+}
+
+.price__title {
+  font: inherit;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 30px;
+  text-transform: uppercase;
+}
+
+.filter-form legend {
+  font: inherit;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 30px;
+  text-transform: uppercase;
+}
+
+.filter-form-price legend {
+  margin-bottom: 48px;
+}
+
+.range__filter {
+  width: 260px;
+  padding-bottom: 54px;
+}
+
+.range__controls {
+  position: relative;
+  height: 41px;
+  background-color: var(--basic-bg-gray);
+  border-radius: 3px;
+  margin-bottom: 14px;
+  padding-top: 39px;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.range__scale {
+  height: 2px;
+  background: var(--special-range-track);
+}
+
+.range__bar {
+  width: 70%;
+  height: 2px;
+  background: var(--basic-light-green);
+}
+
+.range__controls .range__toggle {
+  position: absolute;
+  top: 31px;
+  left: 0;
+  width: 4px;
+  height: 4px;
+  padding: 0;
+  border: 8px solid var(--basic-white);
+  background-color: var(--basic-range-dot-gray);
+  border-radius: 50%;
+  box-shadow: 0 2px 1px 0 var(--special-toggle-shadow-gray);
+  cursor: pointer;
+}
+
+.range__controls .range__toggle_min {
+  left: 18px;
+}
+
+.range__controls .range__toggle_max {
+  left: 160px;
+}
+
+.price__controls {
+  display: flex;
+  justify-content: space-between;
+}
+
+.price__controls label {
+  font: inherit;
+  line-height: 22px;
+  text-transform: uppercase;
+}
+
+.price__controls input {
+  width: 60px;
+  padding: 10px;
+  margin-left: 10px;
+  text-align: center;
+  color: var(--basic-dark-gray);
+  border: none;
+  border-radius: 3px;
+  background: var(--basic-bg-gray);
+  font: inherit;
 }
