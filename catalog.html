@@ -63,172 +63,173 @@
         <h1 class="main-title">Магазин готовых шаблонов</h1>
       </div>
     </section>
-    <div>
-      <section class="templates container">
-        <h2 class="visually-hidden">Фильтр товаров</h2>
-        <div class="main__wrapper">
-          <form class="filter-form" action="https://echo.htmlacademy.ru" method="GET">
-            <fieldset class="price">
-              <legend class="price__title">Стоимость:</legend>
-              <div class="range__filter">
-                <div class="range__controls">
-                  <div class="range__scale">
-                    <div class="range__bar"></div>
-                    <div class="range__toggle range__toggle_min" tabindex="0"></div>
-                    <div class="range__toggle range__toggle_max" tabindex="0"></div>
-                  </div>
-                </div>
-                <div class="price__controls">
-                  <label for="minprice">
-                    от <input type="number" name="min-price" id="minprice" value="0">
-                  </label>
-                  <label for="maxprice">
-                    до <input type="number" name="max-price" id="maxprice" value="15000">
-                  </label>
+    <section class="templates container">
+      <h2 class="visually-hidden">Фильтр товаров</h2>
+      <div class="main__wrapper">
+        <form class="filter-form" action="https://echo.htmlacademy.ru" method="GET">
+          <fieldset class="price">
+            <legend class="price__title">Стоимость:</legend>
+            <div class="range__filter">
+              <div class="range__controls">
+                <div class="range__scale">
+                  <div class="range__bar"></div>
+                  <div class="range__toggle range__toggle_min" tabindex="0"></div>
+                  <div class="range__toggle range__toggle_max" tabindex="0"></div>
                 </div>
               </div>
-        </div>
-        </fieldset>
-        <fieldset class="filter-form-grid">
-          <legend class="filter-form-grid__title">Сетка:</legend>
-          <ul class="filter-form-grid__list">
+              <div class="price__controls">
+                <label for="minprice">
+                  от <input type="number" name="min-price" id="minprice" value="0">
+                </label>
+                <label for="maxprice">
+                  до <input type="number" name="max-price" id="maxprice" value="15000">
+                </label>
+              </div>
+            </div>
+          </fieldset>
+          <fieldset class="filter-form-grid">
+            <legend class="filter-form-grid__title">Сетка:</legend>
+            <ul class="filter-form-grid__list">
+              <li class="filter-form-grid__list-item">
+                <input class="visually-hidden" type="radio" name="grid" value="adaptive" id="filter-adaptive" checked>
+                <label for="filter-adaptive">Адаптивная</label>
+              </li>
+              <li class="filter-form-grid__list-item">
+                <input class="visually-hidden" type="radio" name="grid" value="fixed" id="filter-fixed">
+                <label for="filter-fixed">Фиксированная</label>
+              </li>
+              <li class="filter-form-grid__list-item">
+                <input class="visually-hidden" type="radio" name="grid" value="rubber" id="filter-rubber">
+                <label for="filter-rubber">Резиновая</label>
+              </li>
+            </ul>
+          </fieldset>
+          <fieldset class="filter-form-additions">
+            <legend>Особенности:</legend>
+            <ul class="filter-form-additions__list">
+              <li>
+                <input class="visually-hidden" type="checkbox" name="slider" id="filter-slider" checked>
+                <label for="filter-slider">Слайдер</label>
+              </li>
+              <li>
+                <input class="visually-hidden" type="checkbox" name="advantages" id="filter-advantage">
+                <label for="filter-advantage">Блок преимуществ</label>
+              </li>
+              <li>
+                <input class="visually-hidden" type="checkbox" name="news" id="filter-news" checked>
+                <label for="filter-news">Новости</label>
+              </li>
+              <li>
+                <input class="visually-hidden" type="checkbox" name="gallery" id="filter-gallery">
+                <label for="filter-gallery">Галерея</label>
+              </li>
+              <li>
+                <input class="visually-hidden" type="checkbox" name="bin" id="filter-bin">
+                <label for="filter-bin">Корзина</label>
+              </li>
+            </ul>
+          </fieldset>
+          <button type="submit">Показать</button>
+        </form>
+      </div>
+      <div class="templates__catalog-wrapper">
+        <div class="templates__catalog-filter">
+          <p>Сортировать:</p>
+          <ul class="templates__catalog-filter-list">
             <li>
-              <input type="radio" name="grid" value="adaptive" id="filter-adaptive" checked>
-              <label for="filter-adaptive">Адаптивная</label>
+              <a class="templates-filter-list_active" href="javascript:void(0);">По цене</a>
             </li>
             <li>
-              <input type="radio" name="grid" value="fixed" id="filter-fixed">
-              <label for="filter-fixed">Фиксированная</label>
+              <a href="javascript:void(0);">По типу</a>
             </li>
             <li>
-              <input type="radio" name="grid" value="rubber" id="filter-rubber">
-              <label for="filter-rubber">Резиновая</label>
+              <a href="javascript:void(0);">По названию</a>
             </li>
           </ul>
-        </fieldset>
-        <fieldset>
-          <legend>Особенности:</legend>
+          <ul class="templates__filter-controls">
+            <li>
+              <a>
+                <svg xmlns="http://www.w3.org/2000/svg" width="11" height="10" viewBox="0 0 11 10" fill="none">
+                  <path d="M5.5 10L0 0H11" fill="#231F20" />
+                </svg>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <svg xmlns="http://www.w3.org/2000/svg" width="11" height="10" viewBox="0 0 11 10" fill="none">
+                  <path d="M5.5 0L0 10H11L5.5 0Z" fill="#231F20" />
+                </svg>
+              </a>
+            </li>
+          </ul>
+        </div>
+        <div>
           <ul>
             <li>
-              <input type="checkbox" name="slider" id="filter-slider" checked>
-              <label for="filter-slider">Слайдер</label>
+              <div>
+                <h3><a href="#">Sedona</a></h3>
+                <p>Информационный сайт<br> для туристов</p>
+                <a href="#">9 900 ₽</a>
+              </div>
+              <img src="img/sedona.png" width="358" height="578" alt="Сайт Sedona">
             </li>
             <li>
-              <input type="checkbox" name="advantages" id="filter-advantage">
-              <label for="filter-advantage">Блок преимуществ</label>
+              <div>
+                <h3><a href="#">Pink App</a></h3>
+                <p>Продуктовый лендинг<br> приложения для iOS и Android</p>
+                <a href="#">9 900 ₽</a>
+              </div>
+              <img src="img/pink.png" width="358" height="578" alt="Pink App">
             </li>
             <li>
-              <input type="checkbox" name="news" id="filter-news" checked>
-              <label for="filter-news">Новости</label>
+              <div>
+                <h3><a href="#">Barbershop</a></h3>
+                <p>Сайт салона красоты.<br> Для мужчин, да.</p>
+                <a href="#">9 900 ₽</a>
+              </div>
+              <img src="img/barbershop.png" width="358" height="578" alt=" Сайт Барбершоп &laquo;Бородинский&raquo;">
             </li>
             <li>
-              <input type="checkbox" name="gallery" id="filter-gallery">
-              <label for="filter-gallery">Галерея</label>
+              <div>
+                <h3><a href="#">Mishka</a></h3>
+                <p>Интернет-магазин<br> вязаных игрушек</p>
+                <a href="#">9 900 ₽</a>
+              </div>
+              <img src="img/mishka.png" width="358" height="578" alt="Сайт Mishka">
             </li>
             <li>
-              <input type="checkbox" name="bin" id="filter-bin">
-              <label for="filter-bin">Корзина</label>
+              <div>
+                <h3><a href="#">A Plus</a></h3>
+                <p>Лендинг курсов повышения<br> квалификации</p>
+                <a href="#">9 900 ₽</a>
+              </div>
+              <img src="img/a-plus.png" width="358" height="578" alt="Сайт A Plus">
+            </li>
+            <li>
+              <div>
+                <h3><a href="#">Кваст</a></h3>
+                <p>Промо-сайт производителя<br> крафтового кваса</p>
+                <a href="#">9 900 ₽</a>
+              </div>
+              <img src="img/kvast.png" width="358" height="578" alt="Сайт Кваст">
             </li>
           </ul>
-        </fieldset>
-        <button type="submit">Показать</button>
-        </form>
-    </div>
-    <div>
-      <div>
-        <p>Сортировать:</p>
-        <ul>
-          <li>По цене</li>
-          <li>По типу</li>
-          <li>По названию</li>
-        </ul>
-        <ul>
-          <li>
-            <a>
-              <svg width="11" height="10" viewBox="0 0 11 10" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M5.5 10L0 0H11" fill="#231F20" />
-              </svg>
-            </a>
-          </li>
-          <li>
-            <a href="#">
-              <svg width="11" height="10" viewBox="0 0 11 10" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <g opacity="0.2">
-                  <path d="M5.5 0L0 10H11L5.5 0Z" fill="#A6A6A6" />
-                </g>
-              </svg>
-            </a>
-          </li>
-        </ul>
+        </div>
       </div>
-      <div>
-        <ul>
-          <li>
-            <div>
-              <h3><a href="#">Sedona</a></h3>
-              <p>Информационный сайт<br> для туристов</p>
-              <a href="#">9 900 ₽</a>
-            </div>
-            <img src="img/sedona.png" width="358" height="578" alt="Сайт Sedona">
-          </li>
-          <li>
-            <div>
-              <h3><a href="#">Pink App</a></h3>
-              <p>Продуктовый лендинг<br> приложения для iOS и Android</p>
-              <a href="#">9 900 ₽</a>
-            </div>
-            <img src="img/pink.png" width="358" height="578" alt="Pink App">
-          </li>
-          <li>
-            <div>
-              <h3><a href="#">Barbershop</a></h3>
-              <p>Сайт салона красоты.<br> Для мужчин, да.</p>
-              <a href="#">9 900 ₽</a>
-            </div>
-            <img src="img/barbershop.png" width="358" height="578" alt=" Сайт Барбершоп &laquo;Бородинский&raquo;">
-          </li>
-          <li>
-            <div>
-              <h3><a href="#">Mishka</a></h3>
-              <p>Интернет-магазин<br> вязаных игрушек</p>
-              <a href="#">9 900 ₽</a>
-            </div>
-            <img src="img/mishka.png" width="358" height="578" alt="Сайт Mishka">
-          </li>
-          <li>
-            <div>
-              <h3><a href="#">A Plus</a></h3>
-              <p>Лендинг курсов повышения<br> квалификации</p>
-              <a href="#">9 900 ₽</a>
-            </div>
-            <img src="img/a-plus.png" width="358" height="578" alt="Сайт A Plus">
-          </li>
-          <li>
-            <div>
-              <h3><a href="#">Кваст</a></h3>
-              <p>Промо-сайт производителя<br> крафтового кваса</p>
-              <a href="#">9 900 ₽</a>
-            </div>
-            <img src="img/kvast.png" width="358" height="578" alt="Сайт Кваст">
-          </li>
-        </ul>
-      </div>
-    </div>
-    </div>
-    <ul>
-      <li>
-        <a>1</a>
-      </li>
-      <li>
-        <a href="#">2</a>
-      </li>
-      <li>
-        <a href="#">3</a>
-      </li>
-      <li>
-        <a href="#">Следующая</a>
-      </li>
-    </ul>
+      <ul>
+        <li>
+          <a>1</a>
+        </li>
+        <li>
+          <a href="#">2</a>
+        </li>
+        <li>
+          <a href="#">3</a>
+        </li>
+        <li>
+          <a href="#">Следующая</a>
+        </li>
+      </ul>
     </section>
     </div>
     <section class="contacts">

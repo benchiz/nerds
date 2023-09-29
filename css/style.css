@@ -51,6 +51,9 @@
   --special-hover-yellow: #EAB534;
   --special-active-yellow: #E5A722;
   --special-hover-gray: #B4B9BB;
+  --special-radio: #4D4D4D;
+  --special-hover-button:#DFDFDF;
+  --special-active-button:#D5D5D5;
 }
 
 /* Global */
@@ -646,6 +649,7 @@ fieldset {
 .price__controls label {
   font: inherit;
   line-height: 22px;
+  color: var(--basic-dark-gray);
   text-transform: uppercase;
 }
 
@@ -660,3 +664,177 @@ fieldset {
   background: var(--basic-bg-gray);
   font: inherit;
 }
+
+.price__controls input[value] {
+  font: inherit;
+  line-height: 22px;
+  color: var(--basic-dark-gray);
+  text-transform: uppercase;
+}
+
+.filter-form-grid__title {
+  font: inherit;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 30px;
+  text-transform: uppercase;
+}
+
+.filter-form-grid__list-item {
+  position: relative;
+  font: inherit;
+  line-height: 20px;
+  color: var(--basic-dark-gray);
+  margin-bottom: 20px;
+}
+
+.filter-form-grid__list-item:last-child {
+  margin-bottom: 0;
+}
+
+.filter-form-grid__list-item label {
+  padding-left: 40px;
+}
+
+.filter-form-grid__list label::after {
+  position: absolute;
+  content: '';
+  width: 25px;
+  height: 25px;
+  opacity: 0.4;
+  border: 4px solid var(--special-radio);
+  left: 0;
+  border-radius: 50%;
+}
+
+.filter-form-grid__list input:checked+label::before {
+  position: absolute;
+  content: '';
+  width: 9px;
+  height: 9px;
+  left: 12px;
+  top: 12px;
+  transform: translate(-50%, -50%);
+  background: var(--special-radio);
+  border-radius: 50%;
+  opacity: 0.4;
+}
+
+/* Additions */
+
+.filter-form-additions legend {
+  font: inherit;
+  font-size: 18px;
+  line-height: 30px;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: var(--basic-black);
+}
+
+.filter-form-additions label {
+  font: inherit;
+  line-height: 20px;
+  color: var(--basic-dark-gray);
+}
+
+.filter-form button {
+  font: inherit;
+  font-weight: 500;
+  line-height: 18px;
+  text-transform: uppercase;
+  color: var(--basic-black);
+  border: none;
+  background-color: var(--basic-bg-gray);
+  width: 260px;
+}
+
+.filter-form button:hover {
+  background-color: var(--special-hover-button);
+}
+
+.filter-form button:active {
+  background-color: var(--special-active-button);
+  opacity: 0.3;
+}
+
+.filter-form-additions__list li {
+  position: relative;
+  margin-bottom: 20px;
+}
+
+.filter-form-additions__list li:last-child {
+  margin-bottom: 0;
+}
+
+.filter-form-additions__list label {
+  padding-left: 40px;
+}
+
+.filter-form-additions__list label::before {
+  position: absolute;
+  content: '';
+  width: 25px;
+  height: 25px;
+  left: 0;
+  background-image: url("../img/icons/checkbox-off.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  opacity: 0.4;
+}
+
+.filter-form-additions__list input:checked+label::before {
+  background-image: url("../img/icons/checkbox-on.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  opacity: 0.4;
+}
+
+.filter-form-additions__list label:hover::before {
+  opacity: 1;
+}
+
+.filter-form-additions__list input:checked+label:hover::before {
+  opacity: 1;
+}
+
+.filter-form-additions__list input:disabled+label::before {
+  opacity: 0.1;
+}
+
+.filter-form-additions__list input:disabled+label {
+  opacity: 0.3;
+}
+
+/* Templates */
+
+.templates__catalog-filter p {
+  font: inherit;
+  font-size: 18px;
+  line-height: 30px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.templates__catalog-filter-list a {
+  font: inherit;
+  font-size: 14px;
+  line-height: 18px;
+  text-transform: uppercase;
+  opacity: 0.3;
+  color: var(--basic-black);
+}
+
+.templates__catalog-filter-list a:hover {
+  opacity: 0.6;
+}
+
+.templates__catalog-filter-list a:active {
+  opacity: 1;
+}
+
+.templates__catalog-filter-list .templates-filter-list_active {
+  opacity: 1;
+}
+
