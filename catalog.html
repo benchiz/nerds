@@ -147,15 +147,15 @@
             </li>
           </ul>
           <ul class="templates__filter-controls">
-            <li>
-              <a>
+            <li class="templates__filter-controls-item">
+              <a class="templates__filter-sort templates__filter-sort_active">
                 <svg xmlns="http://www.w3.org/2000/svg" width="11" height="10" viewBox="0 0 11 10" fill="none">
                   <path d="M5.5 10L0 0H11" fill="#231F20" />
                 </svg>
               </a>
             </li>
-            <li>
-              <a href="#">
+            <li class="templates__filter-controls-item">
+              <a class="templates__filter-sort" href="javascript:void(0);">
                 <svg xmlns="http://www.w3.org/2000/svg" width="11" height="10" viewBox="0 0 11 10" fill="none">
                   <path d="M5.5 0L0 10H11L5.5 0Z" fill="#231F20" />
                 </svg>
@@ -163,75 +163,74 @@
             </li>
           </ul>
         </div>
-        <div>
-          <ul>
-            <li>
-              <div>
-                <h3><a href="#">Sedona</a></h3>
+        <div class="templates__preview">
+          <ul class="templates__preview-list">
+            <li class="templates__preview-item">
+              <div class="templates__preview-item-info">
+                <h3><a class="templates-item__title" href="javascript:void(0);">Sedona</a></h3>
                 <p>Информационный сайт<br> для туристов</p>
-                <a href="#">9 900 ₽</a>
+                <a class="templates__preview-item-price" href="javascript:void(0);">9 900 ₽</a>
               </div>
               <img src="img/sedona.png" width="358" height="578" alt="Сайт Sedona">
             </li>
-            <li>
-              <div>
-                <h3><a href="#">Pink App</a></h3>
+            <li class="templates__preview-item">
+              <div class="templates__preview-item-info">
+                <h3><a class="templates-item__title" href="javascript:void(0);">Pink App</a></h3>
                 <p>Продуктовый лендинг<br> приложения для iOS и Android</p>
-                <a href="#">9 900 ₽</a>
+                <a class="templates__preview-item-price" href="javascript:void(0);">9 900 ₽</a>
               </div>
               <img src="img/pink.png" width="358" height="578" alt="Pink App">
             </li>
-            <li>
-              <div>
-                <h3><a href="#">Barbershop</a></h3>
+            <li class="templates__preview-item">
+              <div class="templates__preview-item-info">
+                <h3><a class="templates-item__title" href="javascript:void(0);">Barbershop</a></h3>
                 <p>Сайт салона красоты.<br> Для мужчин, да.</p>
-                <a href="#">9 900 ₽</a>
+                <a class="templates__preview-item-price" href="javascript:void(0);">9 900 ₽</a>
               </div>
               <img src="img/barbershop.png" width="358" height="578" alt=" Сайт Барбершоп &laquo;Бородинский&raquo;">
             </li>
-            <li>
-              <div>
-                <h3><a href="#">Mishka</a></h3>
+            <li class="templates__preview-item">
+              <div class="templates__preview-item-info">
+                <h3><a class="templates-item__title" href="javascript:void(0);">Mishka</a></h3>
                 <p>Интернет-магазин<br> вязаных игрушек</p>
-                <a href="#">9 900 ₽</a>
+                <a class="templates__preview-item-price" href="javascript:void(0);">9 900 ₽</a>
               </div>
               <img src="img/mishka.png" width="358" height="578" alt="Сайт Mishka">
             </li>
-            <li>
-              <div>
-                <h3><a href="#">A Plus</a></h3>
+            <li class="templates__preview-item">
+              <div class="templates__preview-item-info">
+                <h3><a class="templates-item__title" href="javascript:void(0);">A Plus</a></h3>
                 <p>Лендинг курсов повышения<br> квалификации</p>
-                <a href="#">9 900 ₽</a>
+                <a class="templates__preview-item-price" href="javascript:void(0);">9 900 ₽</a>
               </div>
               <img src="img/a-plus.png" width="358" height="578" alt="Сайт A Plus">
             </li>
-            <li>
-              <div>
-                <h3><a href="#">Кваст</a></h3>
+            <li class="templates__preview-item">
+              <div class="templates__preview-item-info">
+                <h3><a class="templates-item__title" href="javascript:void(0);">Кваст</a></h3>
                 <p>Промо-сайт производителя<br> крафтового кваса</p>
-                <a href="#">9 900 ₽</a>
+                <a class="templates__preview-item-price" href="javascript:void(0);">9 900 ₽</a>
               </div>
               <img src="img/kvast.png" width="358" height="578" alt="Сайт Кваст">
             </li>
           </ul>
         </div>
       </div>
-      <ul>
+      <ul class="templates__pagination">
         <li>
-          <a>1</a>
+          <a class="active-page" href="javascript:void(0);">1</a>
         </li>
         <li>
-          <a href="#">2</a>
+          <a href="javascript:void(0);">2</a>
         </li>
         <li>
-          <a href="#">3</a>
+          <a href="javascript:void(0);">3</a>
         </li>
         <li>
-          <a href="#">Следующая</a>
+          <a href="javascript:void(0);">Следующая</a>
         </li>
       </ul>
     </section>
-    </div>
     <section class="contacts">
       <h2 class="visually-hidden">Контакты</h2>
       <div class="contacts__info">
@@ -285,10 +284,10 @@
       </div>
     </section>
   </footer>
-  <section>
-    <h2>Форма для отправки письма</h2>
+  <div class="modal js-modal">
+    <h2 class="visually-hidden">Форма для отправки письма</h2>
     <p>Напишите нам</p>
-    <form action="https://echo.htmlacademy.ru" method="GET">
+    <form class="contacts__form" action="https://echo.htmlacademy.ru" method="GET">
       <p>
         <label for="name-name">Ваше имя:</label>
         <input id="name-name" name="name" type="text" placeholder="Имя Фамилия">
@@ -299,9 +298,13 @@
       </p>
       <p>
         <label for="text-letter">Текст письма:</label>
-        <textarea id="text-letter" name="letter" cols="30" rows="10" placeholder="В свободной форме"></textarea>
+        <textarea name="letter" id="text-letter" cols="30" rows="10" placeholder="В свободной форме"></textarea>
       </p>
-      <button type="submit">Отправить</button>
+      <button class="button button_red" type="submit"><span>Отправить</span></button>
     </form>
-    <button type="button">Закрыть</button>
-  </section>
+    <button class="modal__button-close" type="button"><span>Закрыть</span></button>
+  </div>
+  <script src="js/index.js"></script>
+</body>
+
+</html>
