@@ -226,28 +226,32 @@
       </div>
     </section>
   </footer>
-  <div class="modal js-modal">
-    <div class="js-modal__wrapper">
-      <h2 class="visually-hidden">Форма для отправки письма</h2>
-      <p>Напишите нам</p>
-      <form class="contacts__form" action="https://echo.htmlacademy.ru" method="GET">
-        <p>
-          <label for="name-name">Ваше имя:</label>
-          <input id="name-name" name="name" type="text" placeholder="Имя Фамилия">
-        </p>
-        <p>
-          <label for="email-email">Ваш email:</label>
-          <input id="email-email" name="email" type="email" placeholder="email@example.com">
-        </p>
-        <p>
-          <label for="text-letter">Текст письма:</label>
-          <textarea name="letter" id="text-letter" cols="30" rows="10" placeholder="В свободной форме"></textarea>
-        </p>
-        <button class="button button_red" type="submit"><span>Отправить</span></button>
-      </form>
-      <button class="modal__button-close js-close-popup" type="button"><span>Закрыть</span></button>
-    </div>
-  </div>
+  <section class="modal js-modal">
+    <h2 class="visually-hidden">Форма для отправки письма</h2>
+    <p>Напишите нам</p>
+    <form class="contacts__form" action="https://echo.htmlacademy.ru" method="GET">
+      <p>
+        <label for="name-name">Ваше имя:</label>
+        <input id="name-name" name="name" type="text" placeholder="Имя Фамилия">
+      </p>
+      <p>
+        <label for="email-email">Ваш email:</label>
+        <input id="email-email" name="email" type="email" placeholder="email@example.com">
+      </p>
+      <p>
+        <label for="text-letter">Текст письма:</label>
+        <textarea name="letter" id="text-letter" cols="30" rows="10" placeholder="В свободной форме"></textarea>
+      </p>
+      <button class="button button_red" type="submit"><span>Отправить</span></button>
+    </form>
+    <button class="modal__button-close js-close-popup" type="button" aria-label="Закрыть">
+      <svg xmlns="http://www.w3.org/2000/svg" width="21" height="21" viewBox="0 0 21 21" fill="none">
+        <path
+          d="M13.3299 10.5005L20.7072 3.12321C21.0963 2.7317 21.0963 2.09952 20.7072 1.70801L19.292 0.291799C18.9005 -0.0972665 18.2683 -0.0972665 17.8768 0.291799L10.4995 7.67009L3.12221 0.2928C2.7307 -0.0962657 2.09852 -0.0962657 1.70701 0.2928L0.291799 1.70801C-0.0972665 2.09952 -0.0972665 2.7317 0.291799 3.12321L7.66909 10.5005L0.291799 17.8778C-0.0972665 18.2693 -0.0972665 18.9015 0.291799 19.293L1.70801 20.7082C2.09952 21.0973 2.7317 21.0973 3.12321 20.7082L10.5005 13.3309L17.8778 20.7082C18.2693 21.0973 18.9015 21.0973 19.293 20.7082L20.7082 19.293C21.0973 18.9015 21.0973 18.2693 20.7082 17.8778L13.3299 10.5005Z"
+          fill="#FB565A" />
+      </svg>
+    </button>
+  </section>
   <script src="js/index.js"></script>
 </body>
 
