@@ -78,6 +78,9 @@
   background-color: var(--basic-white);
   min-width: 375px;
   min-height: 100%;
+  display: grid;
+  grid-template-rows: min-content 1fr min-content;
+  align-content: start;
 }
 
 a {
@@ -147,10 +150,21 @@ fieldset {
   background-color: var(--basic-yellow);
 }
 
-/* Main navigation */
+.active {
+  border-bottom: 2px solid var(--basic-light-red);
+}
+
+/* Main header */
 
 .main-header {
   background-color: var(--basic-bg-gray);
+  padding-top: 50px;
+}
+
+.main-header__wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .main-header__logo:hover {
@@ -159,6 +173,28 @@ fieldset {
 
 .main-header__logo:active {
   opacity: 0.3;
+}
+
+.main-nav__list {
+  padding-left: 0;
+}
+
+.main-nav__list li {
+  display: inline-block;
+  margin-right: 45px;
+}
+
+.main-nav__list .active {
+  padding-bottom: 15px;
+}
+
+.main-nav__list li:last-child {
+  margin-right: 0;
+  margin-left: 195px;
+}
+
+.main-nav__list li:last-child img {
+  margin-right: 25px;
 }
 
 .main-nav__list a {
@@ -178,28 +214,11 @@ fieldset {
   opacity: 0.3;
 }
 
-.main-nav__cart-text {
-  font: inherit;
-  font-weight: 500;
-  line-height: 30px;
-  text-transform: uppercase;
-  color: var(--basic-black);
-}
-
-.main-nav__cart-text:hover {
-  color: var(--basic-light-red);
-}
-
-.main-nav__cart-text:active {
-  color: var(--basic-black);
-  opacity: 0.3;
-}
-
 /* Advantages */
 
 .advantages {
   background-color: var(--basic-bg-gray);
-  padding-top: 78px;
+  padding-top: 80px;
 }
 
 .advantages-swiper-slide__desc {
@@ -215,9 +234,13 @@ fieldset {
 }
 
 .advantages .link {
+  font: inherit;
   font-weight: 500;
   line-height: 18px;
   padding: 16px 54px;
+  border-radius: 3px;
+  color: var(--basic-white);
+  text-transform: uppercase;
 }
 
 .advantages .link:hover {
@@ -230,6 +253,11 @@ fieldset {
 
 .advantages .link:active span {
   opacity: 0.3;
+}
+
+.swiper {
+  width: 600px;
+  height: 300px;
 }
 
 /* Services */
@@ -484,11 +512,11 @@ fieldset {
   background: none;
 }
 
-.js-close-popup:hover svg path {
+.js-close-popup:hover {
   opacity: 0.3;
 }
 
-.js-close-popup:active svg path {
+.js-close-popup:active {
   opacity: 0.1;
 }
 
@@ -594,10 +622,6 @@ fieldset {
 }
 
 /* Сatalog */
-
-.active {
-  border-bottom: 2px solid var(--basic-light-red);
-}
 
 .title {
   background-color: var(--basic-bg-gray);
