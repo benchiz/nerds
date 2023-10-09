@@ -9,6 +9,7 @@
   <link rel="apple-touch-icon" href="img/favicons/180.png">
   <link rel="manifest" href="manifest.webmanifest">
   <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css">
   <link rel="stylesheet" href="css/style.css">
 </head>
 
@@ -18,26 +19,25 @@
       <a class="main-header__logo">
         <img src="img/logo/nerds-logo.svg" width="159" height="65" alt="Логотип сайта Нёрдс">
       </a>
-      <nav class="main-nav">
-        <ul class="main-nav__list">
-          <li>
-            <a href="javascript:void(0);">Студия</a>
-          </li>
-          <li>
-            <a href="javascript:void(0);">Клиенты</a>
-          </li>
-          <li>
-            <a href="catalog.html">Магазин</a>
-          </li>
-          <li>
-            <a href="javascript:void(0);">Контакты</a>
-          </li>
-          <li>
-            <img src="img/icons/cart-icon.svg" width="15" height="15" alt="Корзина Нёрдс">
-            <a href="javascript:void(0);">Корзина</a>
-          </li>
-        </ul>
-      </nav>
+      <div class="nav-wrapper">
+        <nav class="main-nav">
+          <ul class="main-nav__list">
+            <li>
+              <a href="javascript:void(0);">Студия</a>
+            </li>
+            <li>
+              <a href="javascript:void(0);">Клиенты</a>
+            </li>
+            <li>
+              <a href="catalog.html">Магазин</a>
+            </li>
+            <li>
+              <a href="javascript:void(0);">Контакты</a>
+            </li>
+          </ul>
+        </nav>
+          <a class="basket" href="javascript:void(0);"><span>Корзина</span></a>
+      </div>
     </div>
   </header>
   <main>
@@ -48,22 +48,30 @@
         <div class="swiper">
           <div class="swiper-wrapper">
             <div class="swiper-slide">
-              <p class="advantages-swiper-slide__desc">Долго, дорого, скрупулезно.</p>
-              <p class="advantages-swiper-slide__text">Математически выверенный дизайн для вашего сайта или мобильного
-                приложения.</p>
-              <a class="link link_red" href="javascript:void(0);"><span>Узнать больше</span></a>
+              <div>
+                <p class="advantages-swiper-slide__desc">Долго, дорого, скрупулезно.</p>
+                <p class="advantages-swiper-slide__text">Математически выверенный дизайн для вашего сайта или мобильного
+                  приложения.</p>
+                <a class="link link_red" href="javascript:void(0);">Узнать больше</a>
+              </div>
+              <img src="img/smartphones-bg.png" width="760" height="431" alt="Смартфоны Нёрдс" >
             </div>
             <div class="swiper-slide">
-              <p class="advantages-swiper-slide__desc">Любим математику как никто другой</p>
-              <p class="advantages-swiper-slide__text">Никакого креатива, только математические формулы для расчета
-                идеальных пропорций</p>
-              <a class="link link_red" href="javascript:void(0);"><span>Узнать больше</span></a>
+              <div>
+                <p class="advantages-swiper-slide__desc">Любим математику как никто другой</p>
+                <p class="advantages-swiper-slide__text">Никакого креатива, только математические формулы для расчета идеальных пропорций</p>
+                <a class="link link_red" href="javascript:void(0);">Узнать больше</a>
+              </div>
+              <img src="img/monoblocks-bg.png" width="760" height="431" alt="Моноблоки Нёрдс">
             </div>
             <div class="swiper-slide">
-              <p class="advantages-swiper-slide__desc">Только ночь, только хардкор</p>
-              <p class="advantages-swiper-slide__text">Работать днем, как все? Мы&nbsp;против этого.
-                Ближе к&nbsp;полуночи работа только начинается.</p>
-              <a class="link link_red" href="javascript:void(0);"><span>Узнать больше</span></a>
+              <div>
+                <p class="advantages-swiper-slide__desc">Только ночь, только хардкор</p>
+                <p class="advantages-swiper-slide__text">Работать днем, как все? Мы&nbsp;против этого.
+                  Ближе к&nbsp;полуночи работа только начинается.</p>
+                <a class="link link_red" href="javascript:void(0);">Узнать больше</a>
+              </div>
+              <img src="img/gadgets-bg.png" width="760" height="431" alt="Гаджеты Нёрдс">
             </div>
           </div>
           <div class="swiper-pagination"></div>
@@ -72,7 +80,7 @@
     </section>
     <section class="services">
       <h2 class="visually-hidden">Услуги</h2>
-      <div class="services__wrapper">
+      <div class="services__wrapper container">
         <ul class="services__list">
           <li class="services__list-item">
             <img src="img/notebook.png" width="300" height="146" alt="">
