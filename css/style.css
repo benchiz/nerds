@@ -135,6 +135,8 @@ fieldset {
 .link {
   display: inline-block;
   font: inherit;
+  line-height: 18px;
+  font-weight: 500;
   color: var(--basic-white);
   text-transform: uppercase;
   border: none;
@@ -323,7 +325,7 @@ fieldset {
 
 .swiper-slide {
   display: flex;
-  opacity: 0 !important; 
+  opacity: 0 !important;
 }
 
 .swiper-slide.swiper-slide-active {
@@ -399,50 +401,97 @@ fieldset {
 
 /* Studio */
 
-.studio__info-desc {
+.studio {
+  padding: 0;
+  padding-top: 75px;
+}
+
+.studio__wrapper {
+  display: flex;
+  gap: 140px;
+}
+
+.studio__info {
+  max-width: 650px;
+}
+
+.studio__info-title {
   font: inherit;
   font-weight: 500;
   font-size: 45px;
   line-height: 45px;
+  margin: 0;
 }
 
 .studio__info-text {
   font: inherit;
   color: var(--basic-dark-gray);
+  margin: 0;
+  margin-top: 32px;
 }
 
-.studio h3 {
+.studio__services-title {
   font: inherit;
   font-weight: 700;
-  text-transform: uppercase;
   color: var(--basic-dark-gray);
+  text-transform: uppercase;
+  margin: 0;
+  margin-top: 40px;
 }
 
-.studio__desc-list {
+.studio__services-list {
   font: inherit;
   color: var(--basic-dark-gray);
+  margin: 0;
+  margin-top: 25px;
 }
 
-.studio__desc-list li {
+.studio__services-list li {
   padding-bottom: 25px;
 }
 
-.studio__desc-list li:last-child {
+.studio__services-list li::before {
+  content: '-';
+  width: 25px;
+  height: 2px;
+  color: var(--basic-light-red);
+}
+
+.studio__services-list li:last-child {
   padding-bottom: 0;
+}
+
+.studio__advantages {
+  max-width: 360px;
+}
+
+.studio__advantages img {
+  padding-left: 10px;
 }
 
 .studio__advantages p {
   font: inherit;
   font-weight: 700;
   color: var(--basic-black);
+  text-align: center;
   text-transform: uppercase;
 }
 
-.studio__advantages-list p {
+.studio__advantages-list {
+  display: flex;
+  gap: 20px;
+  margin: 0;
+  margin-top: 30px;
+  padding-left: 0;
+}
+
+.studio__advantages-list span {
   font: inherit;
   font-weight: 700;
   font-size: 45px;
   line-height: 64px;
+  margin: 0;
+  text-align: left;
 }
 
 .studio__advantages-list sup {
@@ -451,10 +500,12 @@ fieldset {
   line-height: 40px;
 }
 
-.studio__advantages-list span {
+.studio__advantages-list p {
   font: inherit;
   line-height: 18px;
   color: var(--basic-dark-gray);
+  text-align: left;
+  text-transform: none;
 }
 
 /* Clients */
