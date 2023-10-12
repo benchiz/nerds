@@ -224,18 +224,20 @@
     <h2 class="visually-hidden">Форма для отправки письма</h2>
     <h3>Напишите нам</h3>
     <form class="contacts__form" action="https://echo.htmlacademy.ru" method="GET">
-      <p>
-        <label for="name-name">Ваше имя:</label>
-        <input id="name-name" name="name" type="text" placeholder="Имя Фамилия">
-      </p>
-      <p>
-        <label for="email-email">Ваш email:</label>
-        <input id="email-email" name="email" type="email" placeholder="email@example.com">
-      </p>
-      <p>
+      <div class="contacts__form-wrapper">
+        <p>
+          <label for="name-name">Ваше имя:</label>
+          <input id="name-name" name="name" type="text" placeholder="Имя Фамилия">
+        </p>
+        <p>
+          <label for="email-email">Ваш email:</label>
+          <input id="email-email" name="email" type="email" placeholder="email@example.com">
+        </p>
+      </div>
+      <div class="contacts__form-letter-block">
         <label for="text-letter">Текст письма:</label>
         <textarea name="letter" id="text-letter" cols="30" rows="10" placeholder="В свободной форме"></textarea>
-      </p>
+      </div>
       <button class="button button_red" type="submit"><span>Отправить</span></button>
     </form>
     <button class="modal__button-close js-close-popup" type="button" aria-label="Закрыть">
