@@ -146,7 +146,7 @@
           <ul class="clients-list">
             <li>
               <a href="https://htmlacademy.ru/intensive/htmlcss">
-                <img src="img/logo/htmlacademy-logo.svg" width="199" height="57" alt="Логотип HTML Academy">
+                <img src="img/logo/htmlacademy-logo.svg" width="209" height="90" alt="Логотип HTML Academy">
               </a>
             </li>
             <li>
@@ -157,12 +157,12 @@
             </li>
             <li>
               <a href="javascript:void(0);">
-                <img src="img/logo/pink-logo.png" width="185" height="52" alt="Логотип Pink">
+                <img src="img/logo/pink-logo.png" width="209" height="90" alt="Логотип Pink">
               </a>
             </li>
             <li>
               <a href="javascript:void(0);">
-                <img src="img/logo/mishka-logo.png" width="173" height="64" alt="Логотип Mishka">
+                <img src="img/logo/mishka-logo.png" width="209" height="90" alt="Логотип Mishka">
               </a>
             </li>
           </ul>
@@ -222,7 +222,16 @@
   </footer>
   <div class="modal js-modal">
     <h2 class="visually-hidden">Форма для отправки письма</h2>
-    <h3>Напишите нам</h3>
+    <div class="contacts-header-block">
+      <h3>Напишите нам</h3>
+      <button class="modal__button-close js-close-popup" type="button" aria-label="Закрыть">
+        <svg xmlns="http://www.w3.org/2000/svg" width="21" height="21" viewBox="0 0 21 21" fill="none">
+          <path
+            d="M13.3299 10.5005L20.7072 3.12321C21.0963 2.7317 21.0963 2.09952 20.7072 1.70801L19.292 0.291799C18.9005 -0.0972665 18.2683 -0.0972665 17.8768 0.291799L10.4995 7.67009L3.12221 0.2928C2.7307 -0.0962657 2.09852 -0.0962657 1.70701 0.2928L0.291799 1.70801C-0.0972665 2.09952 -0.0972665 2.7317 0.291799 3.12321L7.66909 10.5005L0.291799 17.8778C-0.0972665 18.2693 -0.0972665 18.9015 0.291799 19.293L1.70801 20.7082C2.09952 21.0973 2.7317 21.0973 3.12321 20.7082L10.5005 13.3309L17.8778 20.7082C18.2693 21.0973 18.9015 21.0973 19.293 20.7082L20.7082 19.293C21.0973 18.9015 21.0973 18.2693 20.7082 17.8778L13.3299 10.5005Z"
+            fill="#FB565A" />
+        </svg>
+      </button>
+    </div>
     <form class="contacts__form" action="https://echo.htmlacademy.ru" method="GET">
       <div class="contacts__form-wrapper">
         <p>
@@ -240,13 +249,6 @@
       </div>
       <button class="button button_red" type="submit"><span>Отправить</span></button>
     </form>
-    <button class="modal__button-close js-close-popup" type="button" aria-label="Закрыть">
-      <svg xmlns="http://www.w3.org/2000/svg" width="21" height="21" viewBox="0 0 21 21" fill="none">
-        <path
-          d="M13.3299 10.5005L20.7072 3.12321C21.0963 2.7317 21.0963 2.09952 20.7072 1.70801L19.292 0.291799C18.9005 -0.0972665 18.2683 -0.0972665 17.8768 0.291799L10.4995 7.67009L3.12221 0.2928C2.7307 -0.0962657 2.09852 -0.0962657 1.70701 0.2928L0.291799 1.70801C-0.0972665 2.09952 -0.0972665 2.7317 0.291799 3.12321L7.66909 10.5005L0.291799 17.8778C-0.0972665 18.2693 -0.0972665 18.9015 0.291799 19.293L1.70801 20.7082C2.09952 21.0973 2.7317 21.0973 3.12321 20.7082L10.5005 13.3309L17.8778 20.7082C18.2693 21.0973 18.9015 21.0973 19.293 20.7082L20.7082 19.293C21.0973 18.9015 21.0973 18.2693 20.7082 17.8778L13.3299 10.5005Z"
-          fill="#FB565A" />
-      </svg>
-    </button>
   </div>
   <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
   <script src="js/index.js"></script>

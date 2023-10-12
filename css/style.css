@@ -106,6 +106,7 @@ ol {
 
 fieldset {
   border: none;
+  padding: 0;
 }
 
 .container {
@@ -284,6 +285,10 @@ fieldset {
 
 .advantages .link:hover {
   color: rgba(255, 255, 255, 0.3)
+}
+
+.swiper-pagination {
+  bottom: 100px !important;
 }
 
 .swiper-pagination span {
@@ -559,7 +564,7 @@ fieldset {
   width: 2px;
   height: 52px;
   background-color: var(--basic-bg-gray);
-  margin-left: 50px;
+  margin-left: 45px;
   top: 20px;
 }
 
@@ -632,6 +637,7 @@ fieldset {
 .contacts__modal-btn {
   font: inherit;
   line-height: 18px;
+  font-weight: 500;
   color: var(--basic-white);
   background-color: var(--basic-light-red);
   text-transform: uppercase;
@@ -639,6 +645,7 @@ fieldset {
   border-radius: 3px;
   padding: 15px 45px;
   margin-top: 40px;
+  white-space: nowrap;
 }
 
 .contacts__modal-btn:hover {
@@ -718,13 +725,13 @@ fieldset {
 
 .modal {
   position: fixed;
+  width: 960px;
   padding: 60px 100px 85px 100px;
+  box-sizing: border-box;
   z-index: 1;
-  top: 55%;
+  top: 58%;
   left: 50%;
   transform: translate(-50%, -50%);
-  width: 860px;
-  height: 505px;
   opacity: 0;
   pointer-events: none;
   transition: 0.5s all;
@@ -738,7 +745,6 @@ fieldset {
   line-height: 52px;
   font-weight: 700;
   margin: 0;
-  margin-top: 60px;
 }
 
 .modal label {
@@ -749,23 +755,22 @@ fieldset {
 }
 
 .modal input {
-  font: inherit;
-  font-weight: 400;
-  font-size: 16px;
-  line-height: 18px;
-  color: var(--basic-black);
-  border: 2px solid var(--special-border-light-gray);
+  display: block;
+  width: 325px;
+  padding: 15px;
   margin-top: 10px;
+  font: inherit;
+  line-height: 18px;
+  border: 2px solid var(--special-border-light-gray);
   outline: none;
 }
 
 .modal input:hover {
-  border: 2px solid var(--special-hover-gray);
+  border-color: var(--special-hover-gray);
 }
 
-.modal input:active {
-  border: 2px solid var(--basic-black);
-  outline-color: var(--basic-black);
+.modal input:focus {
+  border-color: var(--basic-black);
 }
 
 .modal input::placeholder {
@@ -776,66 +781,40 @@ fieldset {
   opacity: 0.5;
 }
 
-.modal input:hover::placeholder {
-  border-color: var(--special-hover-gray);
-}
-
 .modal input:focus::placeholder {
   color: var(--basic-medium-gray);
-  border-color: var(--basic-black);
   opacity: 1;
 }
 
-.modal input:focus {
-  color: var(--basic-medium-gray);
-}
-
-.contacts__form-letter-block textarea {
-  display: block;
-  font: inherit;
-  line-height: 18px;
-  padding-top: 15px;
-  padding-left: 15px;
-  margin-top: 10px;
-  resize: none;
-  outline: none;
-  border: 2px solid var(--special-border-light-gray);
-  border-radius: 3px;
-}
-
-.contacts__form-letter-block textarea::placeholder {
-  font: inherit;
-  line-height: 18px;
-  color: var(--basic-medium-gray);
-  opacity: 0.5;
-}
-
-.contacts__form-letter-block textarea:active {
-  outline-color: var(--basic-black);
-}
-
-.contacts__form-letter-block textarea:focus::placeholder {
-  outline: var(--basic-black);
-  opacity: 1;
-}
-
-.contacts__form-letter-block input:invalid:not(:placeholder-shown) {
-  border: 2px solid var(--special-hover-red);
+.modal input:invalid:not(:placeholder-shown) {
+  border-color: var(--special-hover-red);
   color: var(--special-hover-red);
 }
 
-.button {
-  font: inherit;
-  color: var(--basic-white);
-  text-transform: uppercase;
-  border: none;
-  cursor: pointer;
-  margin-top: 50px;
-  padding: 15px 80px;
+.modal.js-active {
+  opacity: 1;
+  pointer-events: all;
 }
 
-.button_red {
-  background-color: var(--basic-light-red);
+.modal .contacts-header-block {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.contacts-header-block .js-close-popup {
+  border: none;
+  cursor: pointer;
+  background: none;
+  opacity: 0.3;
+}
+
+.contacts-header-block .js-close-popup:hover {
+  opacity: 1;
+}
+
+.contacts-header-block .js-close-popup:active {
+  opacity: 0.1;
 }
 
 .contacts__form {
@@ -853,16 +832,62 @@ fieldset {
   gap: 40px;
 }
 
-.contacts__form-wrapper input {
-  display: block;
-  padding: 15px;
-  width: 325px;
-}
-
 .contacts__form-letter-block {
   display: flex;
   flex-direction: column;
+  margin-top: 25px;
+}
+
+.contacts__form-letter-block textarea {
+  display: block;
+  box-sizing: border-box;
+  height: 120px;
+  padding-top: 15px;
+  padding-left: 15px;
   margin-top: 10px;
+  font: inherit;
+  line-height: 18px;
+  border: 2px solid var(--special-border-light-gray);
+  border-radius: 3px;
+  resize: none;
+  outline: none;
+}
+
+.contacts__form-letter-block textarea::placeholder {
+  font: inherit;
+  line-height: 18px;
+  color: var(--basic-medium-gray);
+  opacity: 0.5;
+}
+
+.contacts__form-letter-block textarea:hover {
+  border-color: var(--special-hover-gray);
+}
+
+.contacts__form-letter-block textarea:focus {
+  border-color: var(--basic-black);
+}
+
+.contacts__form-letter-block textarea:focus::placeholder {
+  color: var(--basic-black);
+  opacity: 1;
+}
+
+.button {
+  font: inherit;
+  font-weight: 500;
+  line-height: 18px;
+  color: var(--basic-white);
+  text-transform: uppercase;
+  border: none;
+  cursor: pointer;
+  padding: 15px 80px;
+  margin-top: 50px;
+  border-radius: 3px;
+}
+
+.button_red {
+  background-color: var(--basic-light-red);
 }
 
 .contacts__form .button_red:hover {
@@ -873,29 +898,7 @@ fieldset {
   background-color: var(--special-active-red);
 }
 
-.modal.js-active {
-  opacity: 1;
-  pointer-events: all;
-}
-
-.js-close-popup {
-  position: absolute;
-  top: 75px;
-  right: 90px;
-  border: none;
-  cursor: pointer;
-  background: none;
-}
-
-.js-close-popup:hover {
-  opacity: 0.3;
-}
-
-.js-close-popup:active {
-  opacity: 0.1;
-}
-
-/* Сatalog */
+/* Сatalog page */
 
 .title {
   background-color: var(--basic-bg-gray);
