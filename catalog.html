@@ -9,7 +9,7 @@
   <link rel="apple-touch-icon" href="img/favicons/180.png">
   <link rel="manifest" href="manifest.webmanifest">
   <link rel="stylesheet" href="css/normalize.css">
-  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/style-min.css">
 </head>
 
 <body class="page-body">
@@ -35,7 +35,7 @@
             </li>
           </ul>
         </nav>
-        <a class="basket" href="javascript:void(0);"><span>Корзина</span></a>
+        <a class="basket" href="javascript:void(0);">Корзина</a>
       </div>
     </div>
   </header>
@@ -111,7 +111,7 @@
               </li>
             </ul>
           </fieldset>
-          <button type="submit"><span>Показать</span></button>
+          <button type="submit">Показать</button>
         </form>
 
         <div class="templates__catalog-wrapper">
@@ -163,22 +163,37 @@
                 <img src="img/sedona.png" width="358" height="578" alt="Сайт Sedona">
               </li>
               <li class="templates__preview-item">
+                <div class="card-decor">
+                  <span></span>
+                  <span></span>
+                  <span></span>
+                </div>
                 <div class="templates__preview-item-info">
                   <h3><a class="templates-item__title" href="javascript:void(0);">Pink App</a></h3>
                   <p>Продуктовый лендинг приложения для iOS и&nbsp;Android</p>
                   <a class="templates__preview-item-price" href="javascript:void(0);">9 900 ₽</a>
                 </div>
-                <img src="img/pink.png" width="358" height="578" alt="Pink App">
+                <img src="img/pink.png" width="358" height="578" alt="Приложение Pink App">
               </li>
               <li class="templates__preview-item">
+                <div class="card-decor">
+                  <span></span>
+                  <span></span>
+                  <span></span>
+                </div>
                 <div class="templates__preview-item-info">
                   <h3><a class="templates-item__title" href="javascript:void(0);">Barbershop</a></h3>
                   <p>Сайт салона красоты. Для мужчин, да.</p>
                   <a class="templates__preview-item-price" href="javascript:void(0);">9 900 ₽</a>
                 </div>
-                <img src="img/barbershop.png" width="358" height="578" alt=" Сайт Барбершоп &laquo;Бородинский&raquo;">
+                <img src="img/barbershop.png" width="358" height="578" alt="Сайт Барбершоп &laquo;Бородинский&raquo;">
               </li>
               <li class="templates__preview-item">
+                <div class="card-decor">
+                  <span></span>
+                  <span></span>
+                  <span></span>
+                </div>
                 <div class="templates__preview-item-info">
                   <h3><a class="templates-item__title" href="javascript:void(0);">Mishka</a></h3>
                   <p>Интернет-магазин вязаных игрушек</p>
@@ -187,6 +202,11 @@
                 <img src="img/mishka.png" width="358" height="578" alt="Сайт Mishka">
               </li>
               <li class="templates__preview-item">
+                <div class="card-decor">
+                  <span></span>
+                  <span></span>
+                  <span></span>
+                </div>
                 <div class="templates__preview-item-info">
                   <h3><a class="templates-item__title" href="javascript:void(0);">A Plus</a></h3>
                   <p>Лендинг курсов повышения квалификации</p>
@@ -195,6 +215,11 @@
                 <img src="img/a-plus.png" width="358" height="578" alt="Сайт A Plus">
               </li>
               <li class="templates__preview-item">
+                <div class="card-decor">
+                  <span></span>
+                  <span></span>
+                  <span></span>
+                </div>
                 <div class="templates__preview-item-info">
                   <h3><a class="templates-item__title" href="javascript:void(0);">Кваст</a></h3>
                   <p>Промо-сайт производителя крафтового кваса</p>
@@ -207,13 +232,13 @@
           <div class="cards-navigate">
             <ul class="templates__pagination">
               <li class="is-active">
-                <a href="javascript:void(0);"><span>1</span></a>
+                <a href="javascript:void(0);">1</a>
               </li>
               <li>
-                <a href="javascript:void(0);"><span>2</span></a>
+                <a href="javascript:void(0);">2</a>
               </li>
               <li>
-                <a href="javascript:void(0);"><span>3</span></a>
+                <a href="javascript:void(0);">3</a>
               </li>
             </ul>
             <button>Следующая</button>
@@ -221,7 +246,7 @@
         </div>
       </div>
     </section>
-    <section class="contacts">
+    <section class="contacts contacts-catalog-page">
       <h2 class="visually-hidden">Контакты</h2>
       <div class="container">
         <div class="contacts__info">
@@ -230,10 +255,10 @@
             наб. Реки Карповки, 5&nbsp;лит П, Санкт-Петербург
             <a class="contacts__phone" href="tel:+78005558628">+7 800 555-86-28</a>
           </address>
-          <button class="contacts__modal-btn js-open-popup" type="button"><span>Напишите нам</span></button>
+          <button class="contacts__modal-btn js-open-popup" type="button">Напишите нам</button>
         </div>
       </div>
-      <img src="img/map.png" width="1440" height="416" alt="Адрес Нёрдс">
+      <img src="img/map.png" width="1440" height="416" alt="Адрес дизайн-студии Нёрдс">
     </section>
   </main>
   <footer class="main-footer">
@@ -299,10 +324,10 @@
         <label for="text-letter">Текст письма:</label>
         <textarea name="letter" id="text-letter" cols="30" rows="10" placeholder="В свободной форме"></textarea>
       </div>
-      <button class="button button_red" type="submit"><span>Отправить</span></button>
+      <button class="button button_red" type="submit">Отправить</button>
     </form>
   </div>
-  <script src="js/popup.js"></script>
+  <script src="js/index-min.js"></script>
 </body>
 
 </html>
