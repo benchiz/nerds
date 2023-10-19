@@ -64,7 +64,7 @@
   --special-black-font-link-active: rgba(0, 0, 0, 0.3);
   --special-white-font-link-active: rgba(255, 255, 255, 0.3);
   --special-box-shadow-modal: rgba(0, 0, 0, 0.40);
-  --special-box-shadow-active: rgba(0, 1, 1, 0.10); 
+  --special-box-shadow-active: rgba(0, 1, 1, 0.10);
 }
 
 /* Global */
@@ -203,7 +203,6 @@ fieldset {
 }
 
 .main-nav__list .active {
-  cursor: default;
   padding-bottom: 20px;
 }
 
