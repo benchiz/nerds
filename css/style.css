@@ -1155,7 +1155,23 @@ fieldset {
   opacity: 1;
 }
 
+.filter-form-grid__list input:focus+label::after {
+  opacity: 1;
+}
+
+.filter-form-grid__list input:focus+label::before {
+  opacity: 1;
+}
+
 .filter-form-grid__list input:checked+label:hover::before {
+  opacity: 1;
+}
+
+.filter-form-grid__list input:checked+label:focus::after {
+  opacity: 1;
+}
+
+.filter-form-grid__list input:checked+label:focus::before {
   opacity: 1;
 }
 
@@ -1269,6 +1285,10 @@ fieldset {
   opacity: 1;
 }
 
+.filter-form-additions__list input:focus+label::before {
+  opacity: 1;
+}
+
 .filter-form-additions__list input:disabled+label::before {
   opacity: 0.1;
 }
@@ -1309,10 +1329,6 @@ fieldset {
   opacity: 1;
 }
 
-.templates__filter-sort {
-  cursor: pointer;
-}
-
 .templates__filter-sort svg path {
   fill: var(--special-filter-sort-arrow);
   opacity: 0.2;
@@ -1327,6 +1343,11 @@ fieldset {
 }
 
 .templates__filter-sort_active svg path {
+  opacity: 1;
+  fill: var(--special-filter-sort-arrow-active);
+}
+
+.templates__filter-sort_active:focus svg path {
   opacity: 1;
   fill: var(--special-filter-sort-arrow-active);
 }
@@ -1443,6 +1464,10 @@ fieldset {
   background-color: var(--special-hover-red);
 }
 
+.templates__preview-item-info .templates__preview-item-price:focus {
+  background-color: var(--special-hover-red);
+}
+
 .templates__preview-item-info .templates__preview-item-price:active {
   background-color: var(--special-active-red);
   border-radius: 3px;
@@ -1486,7 +1511,7 @@ fieldset {
 }
 
 .templates__pagination li:active a {
-  color: var(--special-white-font-link-active);
+  opacity: 0.3;
 }
 
 .templates__pagination a {
@@ -1525,6 +1550,10 @@ fieldset {
 }
 
 .cards-navigate button:hover {
+  background: var(--special-hover-button);
+}
+
+.cards-navigate button:focus {
   background: var(--special-hover-button);
 }
 
