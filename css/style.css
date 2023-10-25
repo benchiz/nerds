@@ -64,7 +64,7 @@
   --special-black-font-link-active: rgba(0, 0, 0, 0.3);
   --special-white-font-link-active: rgba(255, 255, 255, 0.3);
   --special-box-shadow-modal: rgba(0, 0, 0, 0.40);
-  --special-box-shadow-active: rgba(0, 1, 1, 0.10); 
+  --special-box-shadow-active: rgba(0, 1, 1, 0.10);
 }
 
 /* Global */
@@ -824,6 +824,10 @@ fieldset {
   pointer-events: all;
 }
 
+.modal.js-error {
+  animation: shake 0.6s;
+}
+
 .modal .contacts-header-block {
   display: flex;
   justify-content: space-between;
@@ -1561,4 +1565,28 @@ fieldset {
   background: var(--special-active-button);
   box-shadow: 0px 3px 0px 0px var(--special-box-shadow-active) inset;
   color: var(--special-black-font-link-active);
+}
+
+/* Animation for modal */
+
+@keyframes shake {
+  0%,
+  100% {
+    transform: translateX(0);
+  }
+
+  10%,
+  30%,
+  50%,
+  70%,
+  90% {
+    transform: translateX(-10px);
+  }
+
+  20%,
+  40%,
+  60%,
+  80% {
+    transform: translateX(10px);
+  }
 }
