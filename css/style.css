@@ -618,7 +618,34 @@ fieldset {
   position: relative;
 }
 
-.contacts img {
+.contacts__map {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+}
+
+.contacts__map-city {
+  position: absolute;
+  top: 0;
+  font-size: 12px;
+  color: var(--basic-bg-gray);
+}
+
+.contacts__map-street {
+  position: absolute;
+  top: 14px;
+  font-size: 12px;
+  color: var(--basic-bg-gray);
+}
+
+.contacts__map iframe {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+
+.contacts__map img {
   width: 100%;
 }
 
@@ -1570,9 +1597,10 @@ fieldset {
 /* Animation for modal */
 
 @keyframes shake {
+
   0%,
   100% {
-    transform: translateX(0);
+    transform: translate(-50%, -50%)
   }
 
   10%,
@@ -1580,13 +1608,13 @@ fieldset {
   50%,
   70%,
   90% {
-    transform: translateX(-10px);
+    transform: translate(-50%, -50%)
   }
 
   20%,
   40%,
   60%,
   80% {
-    transform: translateX(10px);
+    transform: translate(-40%, -50%)
   }
 }
